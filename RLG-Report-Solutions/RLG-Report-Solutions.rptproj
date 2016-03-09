@@ -38,8 +38,8 @@
       <FullPath>06PnL_Standard_By_YearOnYear.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Old_07_PnL_Standard_By_Cluster.rdl</Name>
-      <FullPath>Old_07_PnL_Standard_By_Cluster.rdl</FullPath>
+      <Name>07_PnL_Standard_By_Cluster.rdl</Name>
+      <FullPath>07_PnL_Standard_By_Cluster.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>08_PnL_Standard_By_Cluster_Unit.rdl</Name>
@@ -178,6 +178,22 @@
       <FullPath>NetIncomeByCompany_2.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Old_07_PnL_Standard_By_Cluster.rdl</Name>
+      <FullPath>Old_07_PnL_Standard_By_Cluster.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Old_08_PnL_Standard_By_Cluster_Unit.rdl</Name>
+      <FullPath>Old_08_PnL_Standard_By_Cluster_Unit.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Old_09_PnL_Standard_By_Cluster_BuGrp.rdl</Name>
+      <FullPath>Old_09_PnL_Standard_By_Cluster_BuGrp.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Old_10_PnL_Standard_By_Cluster_Line.rdl</Name>
+      <FullPath>Old_10_PnL_Standard_By_Cluster_Line.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>PL Standard by BU Segment.rdl</Name>
       <FullPath>PL Standard by BU Segment.rdl</FullPath>
     </ProjectItem>
@@ -302,20 +318,8 @@
       <FullPath>TEST_PnL Standard2.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>07_PnL_Standard_By_Cluster.rdl</Name>
-      <FullPath>07_PnL_Standard_By_Cluster.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Old_08_PnL_Standard_By_Cluster_Unit.rdl</Name>
-      <FullPath>Old_08_PnL_Standard_By_Cluster_Unit.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Old_09_PnL_Standard_By_Cluster_BuGrp.rdl</Name>
-      <FullPath>Old_09_PnL_Standard_By_Cluster_BuGrp.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Old_10_PnL_Standard_By_Cluster_Line.rdl</Name>
-      <FullPath>Old_10_PnL_Standard_By_Cluster_Line.rdl</FullPath>
+      <Name>16_PnLConsolidated.rdl</Name>
+      <FullPath>16_PnLConsolidated.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
