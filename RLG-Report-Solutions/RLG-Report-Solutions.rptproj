@@ -74,6 +74,10 @@
       <FullPath>15_PnL_Standard_By_BusinessLevel.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>16_PnLConsolidated.rdl</Name>
+      <FullPath>16_PnLConsolidated.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>ARReport1.rdl</Name>
       <FullPath>ARReport1.rdl</FullPath>
     </ProjectItem>
@@ -318,8 +322,8 @@
       <FullPath>TEST_PnL Standard2.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>16_PnLConsolidated.rdl</Name>
-      <FullPath>16_PnLConsolidated.rdl</FullPath>
+      <Name>17_BL_Consolidated.rdl</Name>
+      <FullPath>17_BL_Consolidated.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
