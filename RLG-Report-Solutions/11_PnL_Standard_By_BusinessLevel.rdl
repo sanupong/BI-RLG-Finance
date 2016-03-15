@@ -365,7 +365,10 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Actual_Amount1.Value) - Sum(Fields!Budget_Amount1.Value)) / Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>= (Sum(Fields!Budget_Amount1.Value)- Sum(Fields!Actual_Amount1.Value)) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -764,8 +767,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
 Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"CostOfSale")) 
 , Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
 , Nothing
-, 1)
-*-1</Value>
+, 1)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -958,7 +960,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=((Sum(Fields!Actual_Amount1.Value)*-1) - Sum(Fields!Budget_Amount1.Value)) / Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>=(Sum(Fields!Budget_Amount1.Value) - (Sum(Fields!Actual_Amount1.Value)*-1)) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -1195,7 +1200,10 @@ ReportItems!Textbox97.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox97.Value - ReportItems!Textbox149.Value) / ReportItems!Textbox149.Value</Value>
+                              <Value>=(ReportItems!Textbox149.Value - ReportItems!Textbox97.Value) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -1460,7 +1468,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
 Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"SellingExpense")) 
 , Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
 , Nothing
-, -1)</Value>
+,1)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -1648,7 +1656,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=((Sum(Fields!Actual_Amount1.Value)*-1) - Sum(Fields!Budget_Amount1.Value)) / Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>=(Sum(Fields!Budget_Amount1.Value) - (Sum(Fields!Actual_Amount1.Value)*-1)) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -1891,7 +1902,10 @@ Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account K
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox36.Value - ReportItems!Textbox185.Value) / ReportItems!Textbox185.Value</Value>
+                              <Value>=(ReportItems!Textbox185.Value - ReportItems!Textbox36.Value) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -2343,7 +2357,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Actual_Amount1.Value) - Sum(Fields!Budget_Amount1.Value)) / Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>=(Sum(Fields!Budget_Amount1.Value) - Sum(Fields!Actual_Amount1.Value)) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -2606,7 +2623,10 @@ ReportItems!Textbox55.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox55.Value - ReportItems!Textbox204.Value) / ReportItems!Textbox204.Value</Value>
+                              <Value>=(ReportItems!Textbox204.Value - ReportItems!Textbox55.Value) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -3105,7 +3125,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=((Sum(Fields!Actual_Amount1.Value)*-1) - Sum(Fields!Budget_Amount1.Value)) / Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>=(Sum(Fields!Budget_Amount1.Value) -(Sum(Fields!Actual_Amount1.Value)*-1)) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -3352,7 +3375,10 @@ ReportItems!Textbox44.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox44.Value - ReportItems!Textbox8.Value) / ReportItems!Textbox8.Value</Value>
+                              <Value>=(ReportItems!Textbox8.Value - ReportItems!Textbox44.Value) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -3804,7 +3830,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Actual_Amount1.Value) - Sum(Fields!Budget_Amount1.Value)) / Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>=(Sum(Fields!Budget_Amount1.Value) - Sum(Fields!Actual_Amount1.Value)) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -4079,7 +4108,10 @@ ReportItems!Textbox65.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox65.Value - ReportItems!Textbox93.Value) / ReportItems!Textbox93.Value</Value>
+                              <Value>=(ReportItems!Textbox93.Value - ReportItems!Textbox65.Value) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -4531,7 +4563,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Actual_Amount1.Value) - Sum(Fields!Budget_Amount1.Value)) / Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>=(Sum(Fields!Budget_Amount1.Value) - Sum(Fields!Actual_Amount1.Value)) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -4844,7 +4879,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox74.Value - ReportItems!Textbox23.Value) / ReportItems!Textbox23.Value</Value>
+                              <Value>=(ReportItems!Textbox23.Value - ReportItems!Textbox74.Value) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -4890,7 +4928,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[668]", Fields!Parent_Account_Key.UniqueName, Fields!Budget_Amount1.Value, "Bonus"))</Value>
+                              <Value>=Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[668]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value, "Bonus"))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -5073,7 +5111,10 @@ ReportItems!Textbox11.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox11.Value - ReportItems!Textbox6.Value) / ReportItems!Textbox6.Value</Value>
+                              <Value>=(ReportItems!Textbox6.Value - ReportItems!Textbox11.Value) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -5308,7 +5349,6 @@ ReportItems!Textbox43.Value
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -5355,7 +5395,10 @@ ReportItems!Textbox43.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox43.Value - ReportItems!Textbox22.Value) / ReportItems!Textbox22.Value</Value>
+                              <Value>=(ReportItems!Textbox22.Value - ReportItems!Textbox43.Value) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -5395,7 +5438,7 @@ ReportItems!Textbox43.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[670]", Fields!Parent_Account_Key.UniqueName, Fields!Budget_Amount1.Value, "CorporationTax"))</Value>
+                              <Value>=Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[670]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value, "CorporationTax"))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -5578,7 +5621,10 @@ ReportItems!Textbox75.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox75.Value - ReportItems!Textbox9.Value) / ReportItems!Textbox9.Value</Value>
+                              <Value>=(ReportItems!Textbox9.Value - ReportItems!Textbox75.Value) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -5868,7 +5914,10 @@ ReportItems!Textbox76.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox76.Value - ReportItems!Textbox88.Value) / ReportItems!Textbox88.Value</Value>
+                              <Value>=(ReportItems!Textbox88.Value - ReportItems!Textbox76.Value) / 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Budget_Amount1.Value,"Revenue"))
+-
+Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3]"+Fields!Business_Type.Value, Fields!Parent_Account_Key.UniqueName+Fields!Business_Type.Value, Fields!Actual_Amount1.Value,"Revenue")))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -6565,7 +6614,7 @@ FROM [RLG-Finance]))))</Statement>
                 <ParameterDefinition>
                   <Name>DimCompanySegmentCompanySegementDesc</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Company Segment].[Company Segement Desc].&amp;[RLG]</DefaultValue>
+                    <DefaultValue>[Dim Company Segment].[Company Segement Desc].[All]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimCompanySegmentCompanySegementDesc</Caption>
                   <HierarchyUniqueName>[Dim Company Segment].[Company Segement Desc]</HierarchyUniqueName>
@@ -6887,7 +6936,7 @@ FROM [RLG-Finance]))))</Statement>
                 <ParameterDefinition>
                   <Name>DimCompanySegmentCompanySegementDesc</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Company Segment].[Company Segement Desc].&amp;[RLG]</DefaultValue>
+                    <DefaultValue>[Dim Company Segment].[Company Segement Desc].[All]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimCompanySegmentCompanySegementDesc</Caption>
                   <HierarchyUniqueName>[Dim Company Segment].[Company Segement Desc]</HierarchyUniqueName>
@@ -6902,7 +6951,7 @@ FROM [RLG-Finance]))))</Statement>
                 <ParameterDefinition>
                   <Name>DimBusinessClusterBusinessType</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Business Cluster].[Business Type].&amp;[Media]</DefaultValue>
+                    <DefaultValue>[Dim Business Cluster].[Business Type].[All]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimBusinessClusterBusinessType</Caption>
                   <HierarchyUniqueName>[Dim Business Cluster].[Business Type]</HierarchyUniqueName>
@@ -10175,6 +10224,16 @@ FROM [RLG-Finance]))))</Statement>
               <Select>
                 <Items>
                   <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Company Segment</DimensionName>
+                      <HierarchyName>Company Segement Desc</HierarchyName>
+                      <HierarchyUniqueName>[Dim Company Segment].[Company Segement Desc]</HierarchyUniqueName>
+                      <LevelName>Company Segement Desc</LevelName>
+                      <UniqueName>[Dim Company Segment].[Company Segement Desc].[Company Segement Desc]</UniqueName>
+                    </ID>
+                    <ItemCaption>Company Segement Desc</ItemCaption>
+                  </Item>
+                  <Item>
                     <ID xsi:type="Measure">
                       <MeasureName>ParameterCaption</MeasureName>
                       <UniqueName>[Measures].[ParameterCaption]</UniqueName>
@@ -10218,6 +10277,10 @@ FROM [RLG-Finance]))))</Statement>
         <rd:Hidden>true</rd:Hidden>
       </Query>
       <Fields>
+        <Field Name="Company_Segement_Desc">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Company Segment].[Company Segement Desc].[Company Segement Desc]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ParameterCaption">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -10642,7 +10705,7 @@ FROM [RLG-Finance]))))</Statement>
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>[Dim Company Segment].[Company Segement Desc].&amp;[All]</Value>
+          <Value>[Dim Company Segment].[Company Segement Desc].[All]</Value>
         </Values>
       </DefaultValue>
       <Prompt>Company Segement Desc</Prompt>
@@ -10659,7 +10722,7 @@ FROM [RLG-Finance]))))</Statement>
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>[Dim Business Cluster].[Business Type].&amp;[Media]</Value>
+          <Value>[Dim Business Cluster].[Business Type].[All]</Value>
         </Values>
       </DefaultValue>
       <Prompt>Business Type</Prompt>
