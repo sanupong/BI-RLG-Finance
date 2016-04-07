@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="Bonus">
+    <Query>
+      <DataSourceReference>DS</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="FromDimTimeDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+        </DataSetParameter>
+        <DataSetParameter Name="ToDimTimeDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+        </DataSetParameter>
+        <DataSetParameter Name="DimBusinessClusterBusinessCluster">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>WITH 
+MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
+MEMBER  [Measures].[Actual Total OtherExpense] as SUM( {[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[615]* [Dim Business Cluster].[Business Cluster].[Business Cluster].ALLMEMBERS},  [Measures].[Actual Amount] )
+MEMBER  [Measures].[OtherExpense Percent] as [Measures].[Actual Amount]/[Measures].[Actual Total OtherExpense]
+SELECT
+ { [MEASURES].[ISLEAFNODE],[Measures].[Actual Amount], [Measures].[Actual Total OtherExpense],[Measures].[OtherExpense Percent] } ON COLUMNS, 
+ 
+ { (
+{
+[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[668]
+,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[668].children)
+}
+* [Dim Business Cluster].[Business Cluster].[Business Cluster].ALLMEMBERS
+) } 
+
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER 
+ON ROWS /*FROM ( SELECT ( -{ [Dim Business Cluster].[Center Flag].&amp;[1] } ) */
+/*ON COLUMNS*/ 
+FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
+FROM ( SELECT ( STRTOMEMBER(@FromDimTimeDate, CONSTRAINED) : STRTOMEMBER(@ToDimTimeDate, CONSTRAINED) ) 
+ON COLUMNS FROM [RLG-Finance]))
+/*) */
+CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+      <rd:DesignerState>
+          <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Lay Out PL Contribution Margin</DimensionName>
+                      <HierarchyName>Parent Account Key</HierarchyName>
+                      <HierarchyUniqueName>[Dim Lay Out PL Contribution Margin].[Parent Account Key]</HierarchyUniqueName>
+                      <LevelName>Level 02</LevelName>
+                      <UniqueName>[Dim Lay Out PL Contribution Margin].[Parent Account Key].[Level 02]</UniqueName>
+                    </ID>
+                    <ItemCaption>Parent Account Key</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                    <IsParentChild>true</IsParentChild>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Business Cluster</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Business Cluster]</HierarchyUniqueName>
+                      <LevelName>Business Cluster</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Business Cluster].[Business Cluster]</UniqueName>
+                    </ID>
+                    <ItemCaption>Business Cluster</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ISLEAFNODE</MeasureName>
+                      <UniqueName>[Measures].[ISLEAFNODE]</UniqueName>
+                    </ID>
+                    <ItemCaption>ISLEAFNODE</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>Actual Amount</MeasureName>
+                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                    </ID>
+                    <ItemCaption>Actual Amount</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>Actual Total OtherExpense</MeasureName>
+                      <UniqueName>[Measures].[Actual Total OtherExpense]</UniqueName>
+                    </ID>
+                    <ItemCaption>Actual Total OtherExpense</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>OtherExpense Percent</MeasureName>
+                      <UniqueName>[Measures].[OtherExpense Percent]</UniqueName>
+                    </ID>
+                    <ItemCaption>OtherExpense Percent</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                  </Item>
+                </Items>
+              </Select>
+              <From>RLG-Finance</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>WITH 
+MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
+MEMBER  [Measures].[Actual Total OtherExpense] as SUM( {[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[615]* [Dim Business Cluster].[Business Cluster].[Business Cluster].ALLMEMBERS},  [Measures].[Actual Amount] )
+MEMBER  [Measures].[OtherExpense Percent] as [Measures].[Actual Amount]/[Measures].[Actual Total OtherExpense]
+SELECT
+ { [MEASURES].[ISLEAFNODE],[Measures].[Actual Amount], [Measures].[Actual Total OtherExpense],[Measures].[OtherExpense Percent] } ON COLUMNS, 
+ 
+ { (
+{
+[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[668]
+,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[668].children)
+}
+* [Dim Business Cluster].[Business Cluster].[Business Cluster].ALLMEMBERS
+) } 
+
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER 
+ON ROWS /*FROM ( SELECT ( -{ [Dim Business Cluster].[Center Flag].&amp;[1] } ) */
+/*ON COLUMNS*/ 
+FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
+FROM ( SELECT ( STRTOMEMBER(@FromDimTimeDate, CONSTRAINED) : STRTOMEMBER(@ToDimTimeDate, CONSTRAINED) ) 
+ON COLUMNS FROM [RLG-Finance]))
+/*) */
+CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>FromDimTimeDate</Name>
+                  <Usage>RangeFrom</Usage>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Time].[Date].&amp;[2013-01-01T00:00:00]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>From Date</Caption>
+                  <HierarchyUniqueName>[Dim Time].[Date]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Date].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Date].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Date].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Date].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>ToDimTimeDate</Name>
+                  <Usage>RangeTo</Usage>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Time].[Date].&amp;[2013-12-31T00:00:00]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>To Date</Caption>
+                  <HierarchyUniqueName>[Dim Time].[Date]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Date].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Date].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Date].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Date].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>DimBusinessClusterBusinessCluster</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Business Cluster].[All]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>DimBusinessClusterBusinessCluster</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Business Cluster]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Business Cluster].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Business Cluster].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Business Cluster].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Business Cluster].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+              </ParameterDefinitions>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Parent_Account_Key">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Contribution Margin].[Parent Account Key]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Business_Cluster">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Business Cluster].[Business Cluster]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ISLEAFNODE">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ISLEAFNODE]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Actual_Amount">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Actual_Total_OtherExpense">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Total OtherExpense]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="OtherExpense_Percent">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[OtherExpense Percent]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

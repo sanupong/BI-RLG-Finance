@@ -314,7 +314,7 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
             <TablixMember>
               <Group Name="BU_Group1">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!BU_Group.Value</GroupExpression>
+                  <GroupExpression>=Fields!BU_Group.Value + Fields!Version.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
@@ -393,7 +393,8 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
               </TablixMembers>
               <Visibility>
                 <Hidden>=IIF(Fields!BU_Group.Value="Center BU 991" OR Fields!BU_Group.Value="Center BU 000" or fields!BU_Group.Value ="N/A"
-OR Fields!BU_Group.Value="Unknown",true,false)</Hidden>
+OR Fields!BU_Group.Value="Unknown"
+OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label),true,false)</Hidden>
               </Visibility>
             </TablixMember>
           </TablixMembers>
@@ -870,7 +871,7 @@ ReportItems!Textbox149.Value
             <TablixMember>
               <Group Name="BU_Group2">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!BU_Group.Value</GroupExpression>
+                  <GroupExpression>=Fields!BU_Group.Value + Fields!Version.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
@@ -884,7 +885,8 @@ ReportItems!Textbox149.Value
               </TablixMembers>
               <Visibility>
                 <Hidden>=IIF(Fields!BU_Group.Value="Center BU 991" OR Fields!BU_Group.Value="Center BU 000" or fields!BU_Group.Value ="N/A"
-OR Fields!BU_Group.Value="Unknown",true,false)</Hidden>
+OR Fields!BU_Group.Value="Unknown"
+OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label),true,false)</Hidden>
               </Visibility>
             </TablixMember>
           </TablixMembers>
@@ -1397,7 +1399,7 @@ Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account K
             <TablixMember>
               <Group Name="BU_Group3">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!BU_Group.Value</GroupExpression>
+                  <GroupExpression>=Fields!BU_Group.Value + Fields!Version.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
@@ -1411,7 +1413,8 @@ Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account K
               </TablixMembers>
               <Visibility>
                 <Hidden>=IIF(Fields!BU_Group.Value="Center BU 991" OR Fields!BU_Group.Value="Center BU 000" or fields!BU_Group.Value ="N/A"
-OR Fields!BU_Group.Value="Unknown",true,false)</Hidden>
+OR Fields!BU_Group.Value="Unknown"
+OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label),true,false)</Hidden>
               </Visibility>
             </TablixMember>
           </TablixMembers>
@@ -1566,7 +1569,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Actual_Amount.Value)</Value>
+                              <Value>=Sum(Fields!Actual_Amount.Value)*-1</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -1662,7 +1665,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Actual_Amount.Value)</Value>
+                              <Value>=Sum(Fields!Actual_Amount.Value)*-1</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -1939,7 +1942,7 @@ ReportItems!Textbox204.Value
             <TablixMember>
               <Group Name="BU_Group5">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!BU_Group.Value</GroupExpression>
+                  <GroupExpression>=Fields!BU_Group.Value + Fields!Version.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
@@ -1953,7 +1956,8 @@ ReportItems!Textbox204.Value
               </TablixMembers>
               <Visibility>
                 <Hidden>=IIF(Fields!BU_Group.Value="Center BU 991" OR Fields!BU_Group.Value="Center BU 000" or fields!BU_Group.Value ="N/A"
-OR Fields!BU_Group.Value="Unknown",true,false)</Hidden>
+OR Fields!BU_Group.Value="Unknown"
+OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label),true,false)</Hidden>
               </Visibility>
             </TablixMember>
           </TablixMembers>
@@ -2516,7 +2520,7 @@ ReportItems!Textbox8.Value
             <TablixMember>
               <Group Name="BU_Group4">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!BU_Group.Value</GroupExpression>
+                  <GroupExpression>=Fields!BU_Group.Value + Fields!Version.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
@@ -2530,7 +2534,8 @@ ReportItems!Textbox8.Value
               </TablixMembers>
               <Visibility>
                 <Hidden>=IIF(Fields!BU_Group.Value="Center BU 991" OR Fields!BU_Group.Value="Center BU 000" or fields!BU_Group.Value ="N/A"
-OR Fields!BU_Group.Value="Unknown",true,false)</Hidden>
+OR Fields!BU_Group.Value="Unknown"
+OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label),true,false)</Hidden>
               </Visibility>
             </TablixMember>
           </TablixMembers>
@@ -3068,7 +3073,7 @@ ReportItems!Textbox93.Value
             <TablixMember>
               <Group Name="BU_Group7">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!BU_Group.Value</GroupExpression>
+                  <GroupExpression>=Fields!BU_Group.Value + Fields!Version.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
@@ -3082,7 +3087,8 @@ ReportItems!Textbox93.Value
               </TablixMembers>
               <Visibility>
                 <Hidden>=IIF(Fields!BU_Group.Value="Center BU 991" OR Fields!BU_Group.Value="Center BU 000" or fields!BU_Group.Value ="N/A"
-OR Fields!BU_Group.Value="Unknown",true,false)</Hidden>
+OR Fields!BU_Group.Value="Unknown"
+OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label),true,false)</Hidden>
               </Visibility>
             </TablixMember>
           </TablixMembers>
@@ -3368,6 +3374,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -3418,6 +3425,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -3655,7 +3663,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[668]", Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value, "Bonus"))</Value>
+                              <Value>=Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[668]", Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value, "Bonus"))*-1</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -3729,7 +3737,7 @@ ReportItems!Textbox31.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[668]"+Fields!BU_Group.Value, Fields!Parent_Account_Key.UniqueName+Fields!BU_Group.Value, Fields!Actual_Amount.Value, "Bonus"))</Value>
+                              <Value>=Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[668]"+Fields!BU_Group.Value, Fields!Parent_Account_Key.UniqueName+Fields!BU_Group.Value, Fields!Actual_Amount.Value, "Bonus"))*-1</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -4015,7 +4023,7 @@ ReportItems!Textbox39.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[670]", Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value, "CorporationTax"))</Value>
+                              <Value>=Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[670]", Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value, "CorporationTax"))*-1</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -4089,7 +4097,7 @@ ReportItems!Textbox3.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[670]"+Fields!BU_Group.Value, Fields!Parent_Account_Key.UniqueName+Fields!BU_Group.Value, Fields!Actual_Amount.Value, "CorporationTax"))</Value>
+                              <Value>=Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[670]"+Fields!BU_Group.Value, Fields!Parent_Account_Key.UniqueName+Fields!BU_Group.Value, Fields!Actual_Amount.Value, "CorporationTax"))*-1</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -4382,7 +4390,7 @@ ReportItems!Textbox88.Value
             <TablixMember>
               <Group Name="BU_Group8">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!BU_Group.Value</GroupExpression>
+                  <GroupExpression>=Fields!BU_Group.Value + Fields!Version.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
@@ -4396,7 +4404,8 @@ ReportItems!Textbox88.Value
               </TablixMembers>
               <Visibility>
                 <Hidden>=IIF(Fields!BU_Group.Value="Center BU 991" OR Fields!BU_Group.Value="Center BU 000" or fields!BU_Group.Value ="N/A"
-OR Fields!BU_Group.Value="Unknown",true,false)</Hidden>
+OR Fields!BU_Group.Value="Unknown"
+OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label),true,false)</Hidden>
               </Visibility>
             </TablixMember>
           </TablixMembers>
@@ -4887,6 +4896,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -4925,6 +4935,17 @@ FROM [RLG-Finance]))))
                       <UniqueName>[Dim Business Cluster].[BU Group].[BU Group]</UniqueName>
                     </ID>
                     <ItemCaption>BU Group</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
@@ -4983,6 +5004,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -5077,6 +5099,10 @@ FROM [RLG-Finance]))))
         </Field>
         <Field Name="Parent_Account_Key">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Contribution Margin].[Parent Account Key]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Actual_Amount">
@@ -5365,6 +5391,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[59].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
@@ -5402,6 +5429,17 @@ FROM [RLG-Finance]))))
                       <UniqueName>[Dim Business Cluster].[BU Group].[BU Group]</UniqueName>
                     </ID>
                     <ItemCaption>BU Group</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
@@ -5479,6 +5517,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[59].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
@@ -5574,6 +5613,10 @@ FROM [RLG-Finance]))))
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[BU Group].[BU Group]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Actual_Amount">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -5639,6 +5682,7 @@ SELECT
 [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[59]
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 
 ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -5677,6 +5721,17 @@ FROM [RLG-Finance]))))
                       <UniqueName>[Dim Business Cluster].[BU Group].[BU Group]</UniqueName>
                     </ID>
                     <ItemCaption>BU Group</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
@@ -5761,6 +5816,7 @@ SELECT
 [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[59]
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 
 ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -5861,6 +5917,10 @@ FROM [RLG-Finance]))))
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[BU Group].[BU Group]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ISLEAFNODE">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ISLEAFNODE]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -5931,6 +5991,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[69].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -5970,6 +6031,17 @@ FROM [RLG-Finance]))))
                       <UniqueName>[Dim Business Cluster].[BU Group].[BU Group]</UniqueName>
                     </ID>
                     <ItemCaption>BU Group</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
@@ -6075,6 +6147,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[69].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -6176,6 +6249,10 @@ FROM [RLG-Finance]))))
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[BU Group].[BU Group]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ISLEAFNODE">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ISLEAFNODE]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -6260,6 +6337,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[436].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
@@ -6297,6 +6375,17 @@ FROM [RLG-Finance]))))
                       <UniqueName>[Dim Business Cluster].[BU Group].[BU Group]</UniqueName>
                     </ID>
                     <ItemCaption>BU Group</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
@@ -6456,6 +6545,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[436].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
@@ -6555,6 +6645,10 @@ FROM [RLG-Finance]))))
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[BU Group].[BU Group]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ISLEAFNODE">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ISLEAFNODE]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -6652,6 +6746,7 @@ SELECT
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS 
 * [Dim Business Cluster].[Center Flag].[Center Flag].ALLMEMBERS
 * [Dim Business Cluster].[BU Group Center Flag].[BU Group Center Flag].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
@@ -6712,6 +6807,17 @@ FROM [RLG-Finance]))))</CommandText>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
                     <ID xsi:type="Measure">
                       <MeasureName>ISLEAFNODE</MeasureName>
                       <UniqueName>[Measures].[ISLEAFNODE]</UniqueName>
@@ -6769,6 +6875,7 @@ SELECT
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS 
 * [Dim Business Cluster].[Center Flag].[Center Flag].ALLMEMBERS
 * [Dim Business Cluster].[BU Group Center Flag].[BU Group Center Flag].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
@@ -6874,6 +6981,10 @@ FROM [RLG-Finance]))))</Statement>
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Center Flag].[Center Flag]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ISLEAFNODE">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ISLEAFNODE]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -6921,6 +7032,7 @@ ON COLUMNS,
 { (
 DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].[Level 02].ALLMEMBERS) 
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS 
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
@@ -6961,6 +7073,17 @@ FROM [RLG-Finance]))))
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
                     <ID xsi:type="Measure">
                       <MeasureName>ISLEAFNODE</MeasureName>
                       <UniqueName>[Measures].[ISLEAFNODE]</UniqueName>
@@ -6996,6 +7119,7 @@ ON COLUMNS,
 { (
 DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].[Level 02].ALLMEMBERS) 
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS 
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
@@ -7089,6 +7213,10 @@ FROM [RLG-Finance]))))
         </Field>
         <Field Name="Parent_Account_Key">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Contribution Margin].[Parent Account Key]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Actual_Amount">
@@ -7135,6 +7263,7 @@ ON COLUMNS,
 DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].[Level 02].ALLMEMBERS) 
 *
 [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
@@ -7175,6 +7304,17 @@ FROM [RLG-Finance]))))
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
                     <ID xsi:type="Measure">
                       <MeasureName>ISLEAFNODE</MeasureName>
                       <UniqueName>[Measures].[ISLEAFNODE]</UniqueName>
@@ -7211,6 +7351,7 @@ ON COLUMNS,
 DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].[Level 02].ALLMEMBERS) 
 *
 [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
@@ -7310,6 +7451,10 @@ FROM [RLG-Finance]))))
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[BU Group].[BU Group]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ISLEAFNODE">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ISLEAFNODE]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -7353,6 +7498,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[615].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -7391,6 +7537,17 @@ FROM [RLG-Finance]))))
                       <UniqueName>[Dim Business Cluster].[BU Group].[BU Group]</UniqueName>
                     </ID>
                     <ItemCaption>BU Group</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
@@ -7449,6 +7606,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[615].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -7543,6 +7701,10 @@ FROM [RLG-Finance]))))
         </Field>
         <Field Name="Parent_Account_Key">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Contribution Margin].[Parent Account Key]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Actual_Amount">
@@ -7600,6 +7762,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[649].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -7638,6 +7801,17 @@ FROM [RLG-Finance]))))
                       <UniqueName>[Dim Business Cluster].[BU Group].[BU Group]</UniqueName>
                     </ID>
                     <ItemCaption>BU Group</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
@@ -7696,6 +7870,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[649].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -7792,6 +7967,10 @@ FROM [RLG-Finance]))))
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Contribution Margin].[Parent Account Key]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Actual_Amount">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -7847,6 +8026,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[650].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -7885,6 +8065,17 @@ FROM [RLG-Finance]))))
                       <UniqueName>[Dim Business Cluster].[BU Group].[BU Group]</UniqueName>
                     </ID>
                     <ItemCaption>BU Group</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
@@ -7943,6 +8134,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[650].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -8037,6 +8229,10 @@ FROM [RLG-Finance]))))
         </Field>
         <Field Name="Parent_Account_Key">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Contribution Margin].[Parent Account Key]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Actual_Amount">
@@ -8240,6 +8436,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[670].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER 
@@ -8280,6 +8477,17 @@ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, F
                       <UniqueName>[Dim Business Cluster].[BU Group].[BU Group]</UniqueName>
                     </ID>
                     <ItemCaption>BU Group</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
@@ -8370,6 +8578,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[670].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER 
@@ -8472,6 +8681,10 @@ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, F
         </Field>
         <Field Name="BU_Group">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[BU Group].[BU Group]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ISLEAFNODE">
@@ -8749,6 +8962,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[668].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER 
@@ -8789,6 +9003,17 @@ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, F
                       <UniqueName>[Dim Business Cluster].[BU Group].[BU Group]</UniqueName>
                     </ID>
                     <ItemCaption>BU Group</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
@@ -8879,6 +9104,7 @@ SELECT
 ,DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[668].children)
 }
 * [Dim Business Cluster].[BU Group].[BU Group].ALLMEMBERS
+, [Dim Business Cluster].[Version].[Version].ALLMEMBERS
 ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER 
@@ -8977,6 +9203,10 @@ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, F
         </Field>
         <Field Name="BU_Group">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[BU Group].[BU Group]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ISLEAFNODE">
@@ -9134,6 +9364,79 @@ FROM [RLG-Finance]))</Statement>
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="BizClusterVersion">
+      <Query>
+        <DataSourceName>DS</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</CommandText>
+        <rd:DesignerState>
+          <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterCaption</MeasureName>
+                      <UniqueName>[Measures].[ParameterCaption]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterCaption</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterValue</MeasureName>
+                      <UniqueName>[Measures].[ParameterValue]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterValue</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterLevel</MeasureName>
+                      <UniqueName>[Measures].[ParameterLevel]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterLevel</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                </Items>
+              </Select>
+              <From>RLG-Finance</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+              <ParameterDefinitions />
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+      <Fields>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportParameters>
     <ReportParameter Name="DimBusinessClusterBusinessCluster">
@@ -9201,6 +9504,22 @@ FROM [RLG-Finance]))</Statement>
         </Values>
       </DefaultValue>
       <Prompt>To Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BizClusterVersion">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Dim Business Cluster].[Version].&amp;[Since 2016]</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>BizClusterVersion</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>BizClusterVersion</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
     </ReportParameter>
   </ReportParameters>
   <Code>Function SumLookup(ByVal items As Object()) As Decimal
