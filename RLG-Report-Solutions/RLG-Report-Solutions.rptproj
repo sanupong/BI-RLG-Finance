@@ -87,6 +87,10 @@
       <FullPath>17_BL_Consolidated.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>18_BudgetVSForecastByTypeOfRevenue.rdl</Name>
+      <FullPath>18_BudgetVSForecastByTypeOfRevenue.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>ARReport1.rdl</Name>
       <FullPath>ARReport1.rdl</FullPath>
     </ProjectItem>
@@ -353,6 +357,10 @@
     <ProjectItem>
       <Name>TEST_PnL Standard2.rdl</Name>
       <FullPath>TEST_PnL Standard2.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>19_BudgetVSForecastByTypeOfRevenue_Detail.rdl</Name>
+      <FullPath>19_BudgetVSForecastByTypeOfRevenue_Detail.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
