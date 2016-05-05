@@ -1707,7 +1707,7 @@
             <TextRuns>
               <TextRun>
                 <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"Equity"))*-1)
-+ReportItems!Textbox77.Value</Value>
+-ReportItems!Textbox77.Value</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -1754,7 +1754,7 @@
             <TextRuns>
               <TextRun>
                 <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"Equity2"))*-1)
-+ReportItems!Textbox78.Value</Value>
+-ReportItems!Textbox78.Value</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -4175,7 +4175,7 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[286] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[151] } ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
 FROM ( SELECT ( {STRTOSET(@DimTimeYear2, CONSTRAINED)} ) ON COLUMNS
@@ -4255,7 +4255,7 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[286] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[151] } ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
 FROM ( SELECT ( {STRTOSET(@DimTimeYear2, CONSTRAINED)} ) ON COLUMNS
@@ -4280,7 +4280,7 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
                 <ParameterDefinition>
                   <Name>DimTimeYear2</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Time].[Year].&amp;[2012]</DefaultValue>
+                    <DefaultValue>[Dim Time].[Year].&amp;[2014]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimTimeYear2</Caption>
                   <HierarchyUniqueName>[Dim Time].[Year]</HierarchyUniqueName>
@@ -5172,7 +5172,7 @@ FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&a
         <DataSourceName>DataSource1</DataSourceName>
         <CommandText>WITH 
 MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Year].CURRENTMEMBER.MEMBER_CAPTION 
-MEMBER [Measures].[ParameterValue] AS "[Dim Time].[Year].&amp;[" + IIF(Year(now()) &gt; 2500, CStr(Year(now())), CStr(Year(now()))) + "]" 
+MEMBER [Measures].[ParameterValue] AS "[Dim Time].[Year].&amp;[" + IIF(Year(now()) &gt; 2500, CStr(Year(now())-543), CStr(Year(now())-543)) + "]" 
 MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Year].CURRENTMEMBER.LEVEL.ORDINAL 
 
 SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Year].ALLMEMBERS ON ROWS 
@@ -5232,7 +5232,7 @@ FROM [RLG-Finance]</CommandText>
             <Query>
               <Statement>WITH 
 MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Year].CURRENTMEMBER.MEMBER_CAPTION 
-MEMBER [Measures].[ParameterValue] AS "[Dim Time].[Year].&amp;[" + IIF(Year(now()) &gt; 2500, CStr(Year(now())), CStr(Year(now()))) + "]" 
+MEMBER [Measures].[ParameterValue] AS "[Dim Time].[Year].&amp;[" + IIF(Year(now()) &gt; 2500, CStr(Year(now())-543), CStr(Year(now())-543)) + "]" 
 MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Year].CURRENTMEMBER.LEVEL.ORDINAL 
 
 SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Year].ALLMEMBERS ON ROWS 
@@ -5267,7 +5267,7 @@ FROM [RLG-Finance]</Statement>
         <DataSourceName>DataSource1</DataSourceName>
         <CommandText>WITH 
 MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Year].CURRENTMEMBER.MEMBER_CAPTION 
-MEMBER [Measures].[ParameterValue] AS "[Dim Time].[Year].&amp;[" + IIF(Year(now()) &gt; 2500, CStr(Year(now())-1), CStr(Year(now())-1)) + "]" 
+MEMBER [Measures].[ParameterValue] AS "[Dim Time].[Year].&amp;[" + IIF(Year(now()) &gt; 2500, CStr(Year(now())-544), CStr(Year(now())-544)) + "]" 
 MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Year].CURRENTMEMBER.LEVEL.ORDINAL 
 
 SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Year].ALLMEMBERS ON ROWS 
@@ -5327,7 +5327,7 @@ FROM [RLG-Finance]</CommandText>
             <Query>
               <Statement>WITH 
 MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Year].CURRENTMEMBER.MEMBER_CAPTION 
-MEMBER [Measures].[ParameterValue] AS "[Dim Time].[Year].&amp;[" + IIF(Year(now()) &gt; 2500, CStr(Year(now())-1), CStr(Year(now())-1)) + "]" 
+MEMBER [Measures].[ParameterValue] AS "[Dim Time].[Year].&amp;[" + IIF(Year(now()) &gt; 2500, CStr(Year(now())-544), CStr(Year(now())-544)) + "]" 
 MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Year].CURRENTMEMBER.LEVEL.ORDINAL 
 
 SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Year].ALLMEMBERS ON ROWS 

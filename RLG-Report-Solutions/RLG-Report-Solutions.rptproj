@@ -16,6 +16,10 @@
       <Name>Bonus.rsd</Name>
       <FullPath>Bonus.rsd</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Revenue.rsd</Name>
+      <FullPath>Revenue.rsd</FullPath>
+    </ProjectItem>
   </DataSets>
   <Reports>
     <ProjectItem>
@@ -91,6 +95,10 @@
       <FullPath>18_BudgetVSForecastByTypeOfRevenue.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>19_BudgetVSForecastByTypeOfRevenue_Detail.rdl</Name>
+      <FullPath>19_BudgetVSForecastByTypeOfRevenue_Detail.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>ARReport1.rdl</Name>
       <FullPath>ARReport1.rdl</FullPath>
     </ProjectItem>
@@ -153,6 +161,10 @@
     <ProjectItem>
       <Name>Copy of 16_PnLConsolidated.rdl</Name>
       <FullPath>Copy of 16_PnLConsolidated.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Copy of 18_BudgetVSForecastByTypeOfRevenue.rdl</Name>
+      <FullPath>Copy of 18_BudgetVSForecastByTypeOfRevenue.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Copy of FinancePLConsolidateBU.rdl</Name>
@@ -359,8 +371,28 @@
       <FullPath>TEST_PnL Standard2.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>19_BudgetVSForecastByTypeOfRevenue_Detail.rdl</Name>
-      <FullPath>19_BudgetVSForecastByTypeOfRevenue_Detail.rdl</FullPath>
+      <Name>TestFilterforFilter.rdl</Name>
+      <FullPath>TestFilterforFilter.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Copy (3) of 07_PnL_Standard_By_Cluster.rdl</Name>
+      <FullPath>Copy (3) of 07_PnL_Standard_By_Cluster.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Test_AlignParameter.rdl</Name>
+      <FullPath>Test_AlignParameter.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Copy of 08_PnL_Standard_By_Cluster_Unit.rdl</Name>
+      <FullPath>Copy of 08_PnL_Standard_By_Cluster_Unit.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Copy (2) of 16_PnLConsolidated.rdl</Name>
+      <FullPath>Copy (2) of 16_PnLConsolidated.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Report5.rdl</Name>
+      <FullPath>Report5.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

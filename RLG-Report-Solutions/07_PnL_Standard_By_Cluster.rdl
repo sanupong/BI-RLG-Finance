@@ -8894,7 +8894,6 @@ MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Business Cluster].
 SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS 
 
 , [Dim Business Cluster].[Business Cluster].ALLMEMBERS ON ROWS 
-
 FROM [RLG-Finance]</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
@@ -8955,7 +8954,6 @@ MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Business Cluster].
 SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS 
 
 , [Dim Business Cluster].[Business Cluster].ALLMEMBERS ON ROWS 
-
 FROM [RLG-Finance]</Statement>
               <ParameterDefinitions />
             </Query>
@@ -8995,6 +8993,16 @@ FROM [RLG-Finance]</Statement>
             <QuerySpecification xsi:type="MDXQuerySpecification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <Select>
                 <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Business Cluster</DimensionName>
+                      <HierarchyName>Version</HierarchyName>
+                      <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                      <LevelName>Version</LevelName>
+                      <UniqueName>[Dim Business Cluster].[Version].[Version]</UniqueName>
+                    </ID>
+                    <ItemCaption>Version</ItemCaption>
+                  </Item>
                   <Item>
                     <ID xsi:type="Measure">
                       <MeasureName>ParameterCaption</MeasureName>
@@ -9039,6 +9047,10 @@ FROM [RLG-Finance]</Statement>
         <rd:Hidden>true</rd:Hidden>
       </Query>
       <Fields>
+        <Field Name="Version">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Business Cluster].[Version].[Version]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ParameterCaption">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -9097,7 +9109,7 @@ FROM [RLG-Finance]</Statement>
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>[Dim Business Cluster].[Version].&amp;[Since 2016]</Value>
+          <Value>[Dim Business Cluster].[Version].[Null]</Value>
         </Values>
       </DefaultValue>
       <Prompt>BizClusterVersion</Prompt>

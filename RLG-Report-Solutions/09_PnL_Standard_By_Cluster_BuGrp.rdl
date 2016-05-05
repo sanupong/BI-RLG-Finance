@@ -3374,7 +3374,6 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -3425,7 +3424,6 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -9509,7 +9507,7 @@ FROM [RLG-Finance]))</Statement>
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>[Dim Business Cluster].[Version].&amp;[Since 2016]</Value>
+          <Value>[Dim Business Cluster].[Version].&amp;[Null]</Value>
         </Values>
       </DefaultValue>
       <Prompt>BizClusterVersion</Prompt>
