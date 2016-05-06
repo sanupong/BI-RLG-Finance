@@ -131,12 +131,24 @@
       <FullPath>Copy (2) of 14_PnL_Standard_By_BusinessLevel.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>16_PnLConsolidated_With_Affiliate_Filter.rdl</Name>
+      <FullPath>16_PnLConsolidated_With_Affiliate_Filter.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Copy (2) of PnL_Standard.rdl</Name>
       <FullPath>Copy (2) of PnL_Standard.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Copy (3) of 07_PnL_Standard_By_Cluster.rdl</Name>
+      <FullPath>Copy (3) of 07_PnL_Standard_By_Cluster.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Copy of 07_PnL_Standard_By_Cluster.rdl</Name>
       <FullPath>Copy of 07_PnL_Standard_By_Cluster.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Copy of 08_PnL_Standard_By_Cluster_Unit.rdl</Name>
+      <FullPath>Copy of 08_PnL_Standard_By_Cluster_Unit.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Copy of 09_PnL_Standard_By_Cluster_BuGrp.rdl</Name>
@@ -157,10 +169,6 @@
     <ProjectItem>
       <Name>Copy of 15_PnL_Standard_By_BusinessLevel.rdl</Name>
       <FullPath>Copy of 15_PnL_Standard_By_BusinessLevel.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of 16_PnLConsolidated.rdl</Name>
-      <FullPath>Copy of 16_PnLConsolidated.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Copy of 18_BudgetVSForecastByTypeOfRevenue.rdl</Name>
@@ -347,6 +355,10 @@
       <FullPath>Report3.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Report5.rdl</Name>
+      <FullPath>Report5.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>templete_PnL Standard1.rdl</Name>
       <FullPath>templete_PnL Standard1.rdl</FullPath>
     </ProjectItem>
@@ -363,6 +375,10 @@
       <FullPath>TEST.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Test_AlignParameter.rdl</Name>
+      <FullPath>Test_AlignParameter.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>TEST_BK.rdl</Name>
       <FullPath>TEST_BK.rdl</FullPath>
     </ProjectItem>
@@ -375,24 +391,8 @@
       <FullPath>TestFilterforFilter.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Copy (3) of 07_PnL_Standard_By_Cluster.rdl</Name>
-      <FullPath>Copy (3) of 07_PnL_Standard_By_Cluster.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Test_AlignParameter.rdl</Name>
-      <FullPath>Test_AlignParameter.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of 08_PnL_Standard_By_Cluster_Unit.rdl</Name>
-      <FullPath>Copy of 08_PnL_Standard_By_Cluster_Unit.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy (2) of 16_PnLConsolidated.rdl</Name>
-      <FullPath>Copy (2) of 16_PnLConsolidated.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Report5.rdl</Name>
-      <FullPath>Report5.rdl</FullPath>
+      <Name>17_BL_Consolidated_With_Affiliate.rdl</Name>
+      <FullPath>17_BL_Consolidated_With_Affiliate.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

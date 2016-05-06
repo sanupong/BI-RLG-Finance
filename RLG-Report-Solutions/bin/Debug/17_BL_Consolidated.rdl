@@ -1684,7 +1684,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.25152in</Top>
+        <Top>3.62652in</Top>
         <Left>0.16542in</Left>
         <Height>0.25in</Height>
         <Width>3.70313in</Width>
@@ -1706,8 +1706,12 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"Equity"))*-1)
--ReportItems!Textbox77.Value</Value>
+                <Value>=ReportItems!Textbox77.Value - 
+(
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"Equity"))*-1) 
++ 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"PL"))*-1)
+)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -1721,7 +1725,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.25152in</Top>
+        <Top>3.62652in</Top>
         <Left>3.8623in</Left>
         <Height>0.25in</Height>
         <Width>1.57812in</Width>
@@ -1753,8 +1757,12 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"Equity2"))*-1)
--ReportItems!Textbox78.Value</Value>
+                <Value>= ReportItems!Textbox78.Value - 
+(
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"Equity2"))*-1)
++
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"PL2"))*-1)
+)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -1768,7 +1776,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.25291in</Top>
+        <Top>3.62791in</Top>
         <Left>6.16751in</Left>
         <Height>0.25in</Height>
         <Width>1.475in</Width>
@@ -1814,7 +1822,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.25291in</Top>
+        <Top>3.62791in</Top>
         <Left>8.34459in</Left>
         <Height>0.25in</Height>
         <Width>1.47153in</Width>
@@ -1862,7 +1870,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.87472in</Top>
+        <Top>4.24972in</Top>
         <Left>0.15292in</Left>
         <Height>0.25in</Height>
         <Width>3.70313in</Width>
@@ -1901,7 +1909,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.87472in</Top>
+        <Top>4.24972in</Top>
         <Left>3.8623in</Left>
         <Height>0.25in</Height>
         <Width>1.55798in</Width>
@@ -1944,7 +1952,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.87472in</Top>
+        <Top>4.24972in</Top>
         <Left>6.16751in</Left>
         <Height>0.25in</Height>
         <Width>1.475in</Width>
@@ -1987,7 +1995,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.87472in</Top>
+        <Top>4.24972in</Top>
         <Left>8.3446in</Left>
         <Height>0.25in</Height>
         <Width>1.49374in</Width>
@@ -2029,7 +2037,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.19416in</Top>
+        <Top>4.56916in</Top>
         <Left>0.14667in</Left>
         <Height>0.25in</Height>
         <Width>3.70313in</Width>
@@ -2068,7 +2076,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.19416in</Top>
+        <Top>4.56916in</Top>
         <Left>3.85605in</Left>
         <Height>0.25in</Height>
         <Width>1.55798in</Width>
@@ -2112,7 +2120,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.19416in</Top>
+        <Top>4.56916in</Top>
         <Left>6.16126in</Left>
         <Height>0.25in</Height>
         <Width>1.475in</Width>
@@ -2156,7 +2164,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.19416in</Top>
+        <Top>4.56916in</Top>
         <Left>8.33835in</Left>
         <Height>0.25in</Height>
         <Width>1.49374in</Width>
@@ -2197,7 +2205,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>2.86541in</Top>
+        <Top>3.24041in</Top>
         <Left>0.16542in</Left>
         <Height>0.25in</Height>
         <Width>3.70313in</Width>
@@ -2219,7 +2227,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"Equity"))*-1)</Value>
+                <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"Equity"))*-1) + 
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"PL"))*-1)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2233,7 +2242,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>2.86541in</Top>
+        <Top>3.24041in</Top>
         <Left>3.86855in</Left>
         <Height>0.25in</Height>
         <Width>1.57812in</Width>
@@ -2265,7 +2274,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"Equity2"))*-1)</Value>
+                <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"Equity2"))*-1)
++
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"PL2"))*-1)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2279,7 +2290,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>2.87652in</Top>
+        <Top>3.25152in</Top>
         <Left>6.16751in</Left>
         <Height>0.25in</Height>
         <Width>1.48125in</Width>
@@ -2325,7 +2336,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>2.86541in</Top>
+        <Top>3.24041in</Top>
         <Left>8.3446in</Left>
         <Height>0.25in</Height>
         <Width>1.47569in</Width>
@@ -2587,7 +2598,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>2.86818in</Top>
+        <Top>3.24318in</Top>
         <Left>9.83418in</Left>
         <Height>0.25in</Height>
         <Width>0.6875in</Width>
@@ -2623,7 +2634,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>2.87652in</Top>
+        <Top>3.25152in</Top>
         <Left>7.66266in</Left>
         <Height>0.25in</Height>
         <Width>0.68195in</Width>
@@ -2659,7 +2670,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>2.87652in</Top>
+        <Top>3.25152in</Top>
         <Left>5.44043in</Left>
         <Height>0.25in</Height>
         <Width>0.72709in</Width>
@@ -2695,7 +2706,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.25291in</Top>
+        <Top>3.62791in</Top>
         <Left>9.83418in</Left>
         <Height>0.25in</Height>
         <Width>0.6875in</Width>
@@ -2731,7 +2742,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.25291in</Top>
+        <Top>3.62791in</Top>
         <Left>7.66266in</Left>
         <Height>0.25in</Height>
         <Width>0.68195in</Width>
@@ -2767,7 +2778,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.25291in</Top>
+        <Top>3.62791in</Top>
         <Left>5.44043in</Left>
         <Height>0.25in</Height>
         <Width>0.72709in</Width>
@@ -2806,7 +2817,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.86638in</Top>
+        <Top>4.24138in</Top>
         <Left>9.82792in</Left>
         <Height>0.25in</Height>
         <Width>0.6875in</Width>
@@ -2845,7 +2856,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.87472in</Top>
+        <Top>4.24972in</Top>
         <Left>7.6564in</Left>
         <Height>0.25in</Height>
         <Width>0.68195in</Width>
@@ -2884,7 +2895,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.87472in</Top>
+        <Top>4.24972in</Top>
         <Left>5.43417in</Left>
         <Height>0.25in</Height>
         <Width>0.72709in</Width>
@@ -2923,7 +2934,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.18444in</Top>
+        <Top>4.55944in</Top>
         <Left>9.84598in</Left>
         <Height>0.25in</Height>
         <Width>0.6875in</Width>
@@ -2962,7 +2973,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.19278in</Top>
+        <Top>4.56778in</Top>
         <Left>7.67446in</Left>
         <Height>0.25in</Height>
         <Width>0.68195in</Width>
@@ -3001,7 +3012,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.19278in</Top>
+        <Top>4.56778in</Top>
         <Left>5.45223in</Left>
         <Height>0.25in</Height>
         <Width>0.72709in</Width>
@@ -3016,6 +3027,332 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Tablix Name="Tablix3">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>1.57812in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.73265in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.46944in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.68959in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.49999in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.69514in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Actual_Amount2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!Actual_Amount.Value)*-1</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <Format>#,0.00;(#,0.00)</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Actual_Amount2</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox13">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=(Sum(Fields!Actual_Amount.Value)*-1) / ReportItems!Textbox81.Value</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <Format>0.00%</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox15">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"PL2"))*-1</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <Format>#,0.00;(#,0.00)</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox15</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox16">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"PL2"))*-1) / ReportItems!Textbox82.Value</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <Format>0.00%</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox17">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"PL"))*-1)
+-(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"PL2"))*-1)</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <Format>#,0.00;(#,0.00)</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox17</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox23">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"PL"))*-1)
+-(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"PL2"))*-1))
+/(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"PL2"))*-1)</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <Format>0.00%</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox23</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Year2">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Year.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!Year.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixMember>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Parent_Account_Key2">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Parent_Account_Key.UniqueName</GroupExpression>
+                </GroupExpressions>
+                <Parent>=Fields!Parent_Account_Key.ParentUniqueName</Parent>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!Account_Alternate_Key.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <TablixHeader>
+                <Size>3.70313in</Size>
+                <CellContents>
+                  <Textbox Name="Parent_Account_Key2">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=Fields!Parent_Account_Key.Value</Value>
+                            <Style>
+                              <FontFamily>Calibri</FontFamily>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Parent_Account_Key2</rd:DefaultName>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                      <PaddingLeft>=Cstr(Fields!Parent_Account_Key.LevelNumber * 10) &amp; "pt"</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <Visibility>
+                <Hidden>true</Hidden>
+                <ToggleItem>Parent_Account_Key2</ToggleItem>
+              </Visibility>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>PL</DataSetName>
+        <Top>2.86263in</Top>
+        <Left>0.16542in</Left>
+        <Height>0.25in</Height>
+        <Width>10.36806in</Width>
+        <ZIndex>49</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
     </ReportItems>
     <Height>5.58277in</Height>
     <Style>
@@ -4691,14 +5028,14 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
         </QueryParameters>
         <CommandText> SELECT 
 NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
 FROM ( SELECT ( {STRTOSET(@DimTimeYear1, CONSTRAINED)} ) ON COLUMNS
 FROM ( SELECT ( {STRTOSET(@FromDimTimeMonth, CONSTRAINED)} ) ON COLUMNS
 
-FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -4735,14 +5072,14 @@ FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&a
             <Query>
               <Statement> SELECT 
 NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
 FROM ( SELECT ( {STRTOSET(@DimTimeYear1, CONSTRAINED)} ) ON COLUMNS
 FROM ( SELECT ( {STRTOSET(@FromDimTimeMonth, CONSTRAINED)} ) ON COLUMNS
 
-FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>DimCompanySegmentCompanySegment</Name>
@@ -4814,14 +5151,14 @@ FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&a
         </QueryParameters>
         <CommandText> SELECT 
 NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
 FROM ( SELECT ( {STRTOSET(@DimTimeYear2, CONSTRAINED)} ) ON COLUMNS
 FROM ( SELECT ( {STRTOSET(@ToDimTimeMonth, CONSTRAINED)} ) ON COLUMNS
 
-FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -4858,14 +5195,14 @@ FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&a
             <Query>
               <Statement> SELECT 
 NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
 FROM ( SELECT ( {STRTOSET(@DimTimeYear2, CONSTRAINED)} ) ON COLUMNS
 FROM ( SELECT ( {STRTOSET(@ToDimTimeMonth, CONSTRAINED)} ) ON COLUMNS
 
-FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>DimCompanySegmentCompanySegment</Name>
@@ -4937,14 +5274,14 @@ FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&a
         </QueryParameters>
         <CommandText> SELECT 
 NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
 FROM ( SELECT ( {STRTOSET(@DimTimeYear1, CONSTRAINED)} ) ON COLUMNS
 FROM ( SELECT ( {STRTOSET(@FromDimTimeMonth, CONSTRAINED)} ) ON COLUMNS
 
-FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[518] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[516] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -4981,14 +5318,14 @@ FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&a
             <Query>
               <Statement> SELECT 
 NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
 FROM ( SELECT ( {STRTOSET(@DimTimeYear1, CONSTRAINED)} ) ON COLUMNS
 FROM ( SELECT ( {STRTOSET(@FromDimTimeMonth, CONSTRAINED)} ) ON COLUMNS
 
-FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[518] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[516] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>DimCompanySegmentCompanySegment</Name>
@@ -5060,14 +5397,14 @@ FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&a
         </QueryParameters>
         <CommandText> SELECT 
 NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
 FROM ( SELECT ( {STRTOSET(@DimTimeYear2, CONSTRAINED)} ) ON COLUMNS
 FROM ( SELECT ( {STRTOSET(@ToDimTimeMonth, CONSTRAINED)} ) ON COLUMNS
 
-FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[518] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[516] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -5104,14 +5441,14 @@ FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&a
             <Query>
               <Statement> SELECT 
 NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
 FROM ( SELECT ( {STRTOSET(@DimTimeYear2, CONSTRAINED)} ) ON COLUMNS
 FROM ( SELECT ( {STRTOSET(@ToDimTimeMonth, CONSTRAINED)} ) ON COLUMNS
 
-FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[518] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&amp;[516] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>DimCompanySegmentCompanySegment</Name>
@@ -5353,6 +5690,364 @@ FROM [RLG-Finance]</Statement>
         </Field>
         <Field Name="ParameterLevel">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="PL">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="DimCompanySegmentCompanySegment">
+            <Value>=Parameters!DimCompanySegmentCompanySegment.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DimTimeYear1">
+            <Value>=Parameters!DimTimeYear1.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FromDimTimeMonth">
+            <Value>=Parameters!FromDimTimeMonth.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText> SELECT  
+{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
+
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[517] } ) ON COLUMNS 
+FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
+/*FROM ( SELECT ( STRTOSET(@DimTimeHierarchy, CONSTRAINED) ) ON COLUMNS*/
+/*FROM ( SELECT ( {STRTOSET(@DimTimeYear1, CONSTRAINED),STRTOSET(@DimTimeYear2, CONSTRAINED)} ) ON COLUMNS */
+FROM ( SELECT ( {STRTOSET(@DimTimeYear1, CONSTRAINED)} ) ON COLUMNS
+FROM ( SELECT ( {STRTOSET(@FromDimTimeMonth, CONSTRAINED)} ) ON COLUMNS
+/*FROM ( SELECT ( STRTOMEMBER(@FromDimTimeMonth, CONSTRAINED) : STRTOMEMBER(@ToDimTimeMonth, CONSTRAINED) ) ON COLUMNS
+*/
+/*FROM ( SELECT ( { [Dim Time].[Year].&amp;[2012], [Dim Time].[Year].&amp;[2014] } ) ON COLUMNS*/
+FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <rd:DesignerState>
+          <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Time</DimensionName>
+                      <HierarchyName>Year</HierarchyName>
+                      <HierarchyUniqueName>[Dim Time].[Year]</HierarchyUniqueName>
+                      <LevelName>Year</LevelName>
+                      <UniqueName>[Dim Time].[Year].[Year]</UniqueName>
+                    </ID>
+                    <ItemCaption>Year</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Lay Out PL Standard</DimensionName>
+                      <HierarchyName>Parent Account Key</HierarchyName>
+                      <HierarchyUniqueName>[Dim Lay Out PL Standard].[Parent Account Key]</HierarchyUniqueName>
+                      <LevelName>Level 02</LevelName>
+                      <UniqueName>[Dim Lay Out PL Standard].[Parent Account Key].[Level 02]</UniqueName>
+                    </ID>
+                    <ItemCaption>Parent Account Key</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                    <IsParentChild>true</IsParentChild>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Lay Out PL Standard</DimensionName>
+                      <HierarchyName>Account Alternate Key</HierarchyName>
+                      <HierarchyUniqueName>[Dim Lay Out PL Standard].[Account Alternate Key]</HierarchyUniqueName>
+                      <LevelName>Account Alternate Key</LevelName>
+                      <UniqueName>[Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key]</UniqueName>
+                    </ID>
+                    <ItemCaption>Account Alternate Key</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>Actual Amount</MeasureName>
+                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                    </ID>
+                    <ItemCaption>Actual Amount</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                  </Item>
+                </Items>
+              </Select>
+              <From>RLG-Finance</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement> SELECT  
+{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
+
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[517] } ) ON COLUMNS 
+FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
+/*FROM ( SELECT ( STRTOSET(@DimTimeHierarchy, CONSTRAINED) ) ON COLUMNS*/
+/*FROM ( SELECT ( {STRTOSET(@DimTimeYear1, CONSTRAINED),STRTOSET(@DimTimeYear2, CONSTRAINED)} ) ON COLUMNS */
+FROM ( SELECT ( {STRTOSET(@DimTimeYear1, CONSTRAINED)} ) ON COLUMNS
+FROM ( SELECT ( {STRTOSET(@FromDimTimeMonth, CONSTRAINED)} ) ON COLUMNS
+/*FROM ( SELECT ( STRTOMEMBER(@FromDimTimeMonth, CONSTRAINED) : STRTOMEMBER(@ToDimTimeMonth, CONSTRAINED) ) ON COLUMNS
+*/
+/*FROM ( SELECT ( { [Dim Time].[Year].&amp;[2012], [Dim Time].[Year].&amp;[2014] } ) ON COLUMNS*/
+FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>DimCompanySegmentCompanySegment</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Company Segment].[Company Segement Desc].[All]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>DimCompanySegmentCompanySegment</Caption>
+                  <HierarchyUniqueName>[Dim Company Segment].[Company Segement Desc]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Company Segment].[Company Segement Desc].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>DimTimeYear1</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Time].[Year].&amp;[2014]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>DimTimeYear1</Caption>
+                  <HierarchyUniqueName>[Dim Time].[Year]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Year].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Year].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Year].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Year].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>FromDimTimeMonth</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Time].[Month].[All]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>FromDimTimeMonth</Caption>
+                  <HierarchyUniqueName>[Dim Time].[Month]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Month].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Month].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Month].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Month].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
+              </ParameterDefinitions>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+      </Query>
+      <Fields>
+        <Field Name="Year">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Time].[Year].[Year]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Parent_Account_Key">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Parent Account Key]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Account_Alternate_Key">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Actual_Amount">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="PL2">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="DimCompanySegmentCompanySegment">
+            <Value>=Parameters!DimCompanySegmentCompanySegment.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DimTimeYear2">
+            <Value>=Parameters!DimTimeYear2.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ToDimTimeMonth">
+            <Value>=Parameters!ToDimTimeMonth.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText> SELECT  
+{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
+
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[517] } ) ON COLUMNS 
+FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
+/*FROM ( SELECT ( STRTOSET(@DimTimeHierarchy, CONSTRAINED) ) ON COLUMNS*/
+/*FROM ( SELECT ( {STRTOSET(@DimTimeYear1, CONSTRAINED),STRTOSET(@DimTimeYear2, CONSTRAINED)} ) ON COLUMNS */
+FROM ( SELECT ( {STRTOSET(@DimTimeYear2, CONSTRAINED)} ) ON COLUMNS
+FROM ( SELECT ( {STRTOSET(@ToDimTimeMonth, CONSTRAINED)} ) ON COLUMNS
+/*FROM ( SELECT ( STRTOMEMBER(@FromDimTimeMonth, CONSTRAINED) : STRTOMEMBER(@ToDimTimeMonth, CONSTRAINED) ) ON COLUMNS
+*/
+/*FROM ( SELECT ( { [Dim Time].[Year].&amp;[2012], [Dim Time].[Year].&amp;[2014] } ) ON COLUMNS*/
+FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <rd:DesignerState>
+          <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Time</DimensionName>
+                      <HierarchyName>Year</HierarchyName>
+                      <HierarchyUniqueName>[Dim Time].[Year]</HierarchyUniqueName>
+                      <LevelName>Year</LevelName>
+                      <UniqueName>[Dim Time].[Year].[Year]</UniqueName>
+                    </ID>
+                    <ItemCaption>Year</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Lay Out PL Standard</DimensionName>
+                      <HierarchyName>Parent Account Key</HierarchyName>
+                      <HierarchyUniqueName>[Dim Lay Out PL Standard].[Parent Account Key]</HierarchyUniqueName>
+                      <LevelName>Level 02</LevelName>
+                      <UniqueName>[Dim Lay Out PL Standard].[Parent Account Key].[Level 02]</UniqueName>
+                    </ID>
+                    <ItemCaption>Parent Account Key</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                    <IsParentChild>true</IsParentChild>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Lay Out PL Standard</DimensionName>
+                      <HierarchyName>Account Alternate Key</HierarchyName>
+                      <HierarchyUniqueName>[Dim Lay Out PL Standard].[Account Alternate Key]</HierarchyUniqueName>
+                      <LevelName>Account Alternate Key</LevelName>
+                      <UniqueName>[Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key]</UniqueName>
+                    </ID>
+                    <ItemCaption>Account Alternate Key</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>Actual Amount</MeasureName>
+                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                    </ID>
+                    <ItemCaption>Actual Amount</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                  </Item>
+                </Items>
+              </Select>
+              <From>RLG-Finance</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement> SELECT  
+{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
+
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[517] } ) ON COLUMNS 
+FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
+/*FROM ( SELECT ( STRTOSET(@DimTimeHierarchy, CONSTRAINED) ) ON COLUMNS*/
+/*FROM ( SELECT ( {STRTOSET(@DimTimeYear1, CONSTRAINED),STRTOSET(@DimTimeYear2, CONSTRAINED)} ) ON COLUMNS */
+FROM ( SELECT ( {STRTOSET(@DimTimeYear2, CONSTRAINED)} ) ON COLUMNS
+FROM ( SELECT ( {STRTOSET(@ToDimTimeMonth, CONSTRAINED)} ) ON COLUMNS
+/*FROM ( SELECT ( STRTOMEMBER(@FromDimTimeMonth, CONSTRAINED) : STRTOMEMBER(@ToDimTimeMonth, CONSTRAINED) ) ON COLUMNS
+*/
+/*FROM ( SELECT ( { [Dim Time].[Year].&amp;[2012], [Dim Time].[Year].&amp;[2014] } ) ON COLUMNS*/
+FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>DimCompanySegmentCompanySegment</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Company Segment].[Company Segement Desc].[All]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>DimCompanySegmentCompanySegment</Caption>
+                  <HierarchyUniqueName>[Dim Company Segment].[Company Segement Desc]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Company Segment].[Company Segement Desc].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>DimTimeYear2</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Time].[Year].&amp;[2013]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>DimTimeYear2</Caption>
+                  <HierarchyUniqueName>[Dim Time].[Year]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Year].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Year].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Year].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Year].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>ToDimTimeMonth</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Time].[Month].[All]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>ToDimTimeMonth</Caption>
+                  <HierarchyUniqueName>[Dim Time].[Month]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Month].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Month].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Month].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Month].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
+              </ParameterDefinitions>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+      </Query>
+      <Fields>
+        <Field Name="Year">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Time].[Year].[Year]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Parent_Account_Key">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Parent Account Key]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Account_Alternate_Key">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Actual_Amount">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
