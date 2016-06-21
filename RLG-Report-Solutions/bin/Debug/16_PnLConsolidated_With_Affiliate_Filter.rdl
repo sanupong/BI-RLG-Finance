@@ -552,6 +552,9 @@
         <Height>0.63541in</Height>
         <Width>10.35626in</Width>
         <ZIndex>1</ZIndex>
+        <Visibility>
+          <Hidden>=IIF(Globals!RenderFormat.Name="EXCEL",True,False)</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1702,13 +1705,7 @@ ReportItems!Textbox62.Value</Value>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[282]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"Expense"))*-1)
-+
-(IIF(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[499]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"LiabilitiesLoss810021"))&lt;0,
-Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[499]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"LiabilitiesLoss810021")),0)*-1)
-+
-(IIF(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[500]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"LiabilitiesLoss810022"))&lt;0,
-Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[500]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"LiabilitiesLoss810022")),0)*-1)</Value>
+                <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[282]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"Expense"))*-1)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -1755,13 +1752,7 @@ Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[5
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[282]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"Expense2"))*-1)
-+
-(IIF(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[499]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"LiabilitiesLoss810021_2"))&lt;0,
-Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[499]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"LiabilitiesLoss810021_2")),0)*-1)
-+
-(IIF(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[500]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"LiabilitiesLoss810022_2"))&lt;0,
-Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[500]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"LiabilitiesLoss810022_2")),0)*-1)</Value>
+                <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[282]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Actual_Amount.Value,"Expense2"))*-1)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2557,7 +2548,7 @@ Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[5
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Actual_Amount.Value)</Value>
+                              <Value>=Sum(Fields!Actual_Amount.Value)*-1</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>#,0.00;(#,0.00)</Format>
@@ -2689,8 +2680,8 @@ ReportItems!Textbox62.Value</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"Tax"))*-1)
--(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"Tax2"))*-1)</Value>
+                              <Value>=(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"Tax2"))*-1)
+- (Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"Tax"))*-1)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>#,0.00;(#,0.00)</Format>
@@ -2722,8 +2713,8 @@ ReportItems!Textbox62.Value</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"Tax"))*-1)
--(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"Tax2"))*-1))
+                              <Value>=((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"Tax2"))*-1) -
+(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"Tax"))))
 /
 (Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Actual_Amount.Value,"Tax2"))*-1)</Value>
                               <Style>
@@ -3093,14 +3084,14 @@ ReportItems!Textbox62.Value</Value>
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>4.1036in</Height>
+    <Height>4.13485in</Height>
     <Style>
       <Border>
         <Style>None</Style>
       </Border>
     </Style>
   </Body>
-  <Width>10.83417in</Width>
+  <Width>10.70917in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -3313,7 +3304,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                 <ParameterDefinition>
                   <Name>DimAffiliateSegmentAffiliateSegment</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</DefaultValue>
+                    <DefaultValue>[Dim Affiliate Segment].[Description].&amp;[n/a]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimAffiliateSegmentAffiliateSegment</Caption>
                   <HierarchyUniqueName>[Dim Affiliate Segment].[Description]</HierarchyUniqueName>
@@ -3429,7 +3420,6 @@ FROM [RLG-Finance])</Statement>
                   <DefaultValues>
                     <DefaultValue>[Dim Company Segment].[Company Segement Desc].&amp;[Consolidate]</DefaultValue>
                     <DefaultValue>[Dim Company Segment].[Company Segement Desc].&amp;[RLG_adj]</DefaultValue>
-                    <DefaultValue>[Dim Company Segment].[Company Segement Desc].[All].UNKNOWNMEMBER</DefaultValue>
                   </DefaultValues>
                   <Caption>ParamFilterCompanySegmentValue</Caption>
                   <HierarchyUniqueName>[Dim Company Segment].[Company Segement Desc]</HierarchyUniqueName>
@@ -4160,7 +4150,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                 <ParameterDefinition>
                   <Name>DimAffiliateSegmentAffiliateSegment</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</DefaultValue>
+                    <DefaultValue>[Dim Affiliate Segment].[Description].&amp;[n/a]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimAffiliateSegmentAffiliateSegment</Caption>
                   <HierarchyUniqueName>[Dim Affiliate Segment].[Description]</HierarchyUniqueName>
@@ -4353,7 +4343,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                 <ParameterDefinition>
                   <Name>DimAffiliateSegmentAffiliateSegment</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</DefaultValue>
+                    <DefaultValue>[Dim Affiliate Segment].[Description].&amp;[n/a]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimAffiliateSegmentAffiliateSegment</Caption>
                   <HierarchyUniqueName>[Dim Affiliate Segment].[Description]</HierarchyUniqueName>
@@ -4546,7 +4536,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                 <ParameterDefinition>
                   <Name>DimAffiliateSegmentAffiliateSegment</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</DefaultValue>
+                    <DefaultValue>[Dim Affiliate Segment].[Description].&amp;[n/a]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimAffiliateSegmentAffiliateSegment</Caption>
                   <HierarchyUniqueName>[Dim Affiliate Segment].[Description]</HierarchyUniqueName>
@@ -4739,7 +4729,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                 <ParameterDefinition>
                   <Name>DimAffiliateSegmentAffiliateSegment</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</DefaultValue>
+                    <DefaultValue>[Dim Affiliate Segment].[Description].&amp;[n/a]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimAffiliateSegmentAffiliateSegment</Caption>
                   <HierarchyUniqueName>[Dim Affiliate Segment].[Description]</HierarchyUniqueName>
@@ -4932,7 +4922,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                 <ParameterDefinition>
                   <Name>DimAffiliateSegmentAffiliateSegment</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</DefaultValue>
+                    <DefaultValue>[Dim Affiliate Segment].[Description].&amp;[n/a]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimAffiliateSegmentAffiliateSegment</Caption>
                   <HierarchyUniqueName>[Dim Affiliate Segment].[Description]</HierarchyUniqueName>
@@ -5125,7 +5115,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                 <ParameterDefinition>
                   <Name>DimAffiliateSegmentAffiliateSegment</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</DefaultValue>
+                    <DefaultValue>[Dim Affiliate Segment].[Description].&amp;[n/a]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimAffiliateSegmentAffiliateSegment</Caption>
                   <HierarchyUniqueName>[Dim Affiliate Segment].[Description]</HierarchyUniqueName>
@@ -5318,7 +5308,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                 <ParameterDefinition>
                   <Name>DimAffiliateSegmentAffiliateSegment</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</DefaultValue>
+                    <DefaultValue>[Dim Affiliate Segment].[Description].&amp;[n/a]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimAffiliateSegmentAffiliateSegment</Caption>
                   <HierarchyUniqueName>[Dim Affiliate Segment].[Description]</HierarchyUniqueName>
@@ -5511,7 +5501,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                 <ParameterDefinition>
                   <Name>DimAffiliateSegmentAffiliateSegment</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</DefaultValue>
+                    <DefaultValue>[Dim Affiliate Segment].[Description].&amp;[n/a]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimAffiliateSegmentAffiliateSegment</Caption>
                   <HierarchyUniqueName>[Dim Affiliate Segment].[Description]</HierarchyUniqueName>
@@ -5704,7 +5694,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                 <ParameterDefinition>
                   <Name>DimAffiliateSegmentAffiliateSegment</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</DefaultValue>
+                    <DefaultValue>[Dim Affiliate Segment].[Description].&amp;[n/a]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimAffiliateSegmentAffiliateSegment</Caption>
                   <HierarchyUniqueName>[Dim Affiliate Segment].[Description]</HierarchyUniqueName>
@@ -5897,7 +5887,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                 <ParameterDefinition>
                   <Name>DimAffiliateSegmentAffiliateSegment</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</DefaultValue>
+                    <DefaultValue>[Dim Affiliate Segment].[Description].&amp;[n/a]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimAffiliateSegmentAffiliateSegment</Caption>
                   <HierarchyUniqueName>[Dim Affiliate Segment].[Description]</HierarchyUniqueName>
@@ -6090,7 +6080,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                 <ParameterDefinition>
                   <Name>DimAffiliateSegmentAffiliateSegment</Name>
                   <DefaultValues>
-                    <DefaultValue>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</DefaultValue>
+                    <DefaultValue>[Dim Affiliate Segment].[Description].&amp;[n/a]</DefaultValue>
                   </DefaultValues>
                   <Caption>DimAffiliateSegmentAffiliateSegment</Caption>
                   <HierarchyUniqueName>[Dim Affiliate Segment].[Description]</HierarchyUniqueName>
@@ -6751,7 +6741,6 @@ FROM [RLG-Finance])</Statement>
         <Values>
           <Value>[Dim Company Segment].[Company Segement Desc].&amp;[Consolidate]</Value>
           <Value>[Dim Company Segment].[Company Segement Desc].&amp;[RLG_adj]</Value>
-          <Value>[Dim Company Segment].[Company Segement Desc].[All].UNKNOWNMEMBER</Value>
         </Values>
       </DefaultValue>
       <Prompt>ParamFilterCompanySegmentValue</Prompt>
@@ -6790,7 +6779,6 @@ FROM [RLG-Finance])</Statement>
           <Value>[Dim Time].[Year].&amp;[2011]</Value>
           <Value>[Dim Time].[Year].&amp;[2012]</Value>
           <Value>[Dim Time].[Year].&amp;[2013]</Value>
-          <Value>[Dim Time].[Year].[All].UNKNOWNMEMBER</Value>
         </Values>
       </DefaultValue>
       <Prompt>ParamFilterYearValue</Prompt>
@@ -6826,7 +6814,6 @@ FROM [RLG-Finance])</Statement>
       <DefaultValue>
         <Values>
           <Value>[Dim Time].[Month].&amp;[0]</Value>
-          <Value>[Dim Time].[Month].[All].UNKNOWNMEMBER</Value>
         </Values>
       </DefaultValue>
       <Prompt>ParamFilterMonthValue</Prompt>
@@ -6929,7 +6916,7 @@ FROM [RLG-Finance])</Statement>
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>[Dim Affiliate Segment].[Description].[All].UNKNOWNMEMBER</Value>
+          <Value>[Dim Affiliate Segment].[Description].&amp;[n/a]</Value>
         </Values>
       </DefaultValue>
       <Prompt>Affiliates</Prompt>

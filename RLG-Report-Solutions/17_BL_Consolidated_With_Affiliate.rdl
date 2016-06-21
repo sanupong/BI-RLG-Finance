@@ -3396,7 +3396,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandText> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -3454,10 +3454,10 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                   </Item>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>ActualWithBegin</MeasureName>
+                      <UniqueName>[Measures].[ActualWithBegin]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
+                    <ItemCaption>ActualWithBegin</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -3480,7 +3480,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
             </QuerySpecification>
             <Query>
               <Statement> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -3572,8 +3572,8 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="ActualWithBegin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ActualWithBegin]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -4180,7 +4180,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           </QueryParameter>
         </QueryParameters>
         <CommandText> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -4238,10 +4238,10 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                   </Item>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>ActualWithBegin</MeasureName>
+                      <UniqueName>[Measures].[ActualWithBegin]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
+                    <ItemCaption>ActualWithBegin</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -4264,7 +4264,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
             </QuerySpecification>
             <Query>
               <Statement> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -4356,8 +4356,8 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="ActualWithBegin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ActualWithBegin]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -4380,7 +4380,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           </QueryParameter>
         </QueryParameters>
         <CommandText> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -4435,10 +4435,10 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                   </Item>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>ActualWithBegin</MeasureName>
+                      <UniqueName>[Measures].[ActualWithBegin]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
+                    <ItemCaption>ActualWithBegin</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -4461,7 +4461,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
             </QuerySpecification>
             <Query>
               <Statement> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -4550,8 +4550,8 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="ActualWithBegin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ActualWithBegin]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -4574,7 +4574,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           </QueryParameter>
         </QueryParameters>
         <CommandText> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -4629,10 +4629,10 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                   </Item>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>ActualWithBegin</MeasureName>
+                      <UniqueName>[Measures].[ActualWithBegin]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
+                    <ItemCaption>ActualWithBegin</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -4655,7 +4655,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
             </QuerySpecification>
             <Query>
               <Statement> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -4744,8 +4744,8 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="ActualWithBegin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ActualWithBegin]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -4768,7 +4768,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           </QueryParameter>
         </QueryParameters>
         <CommandText> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -4823,10 +4823,10 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                   </Item>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>ActualWithBegin</MeasureName>
+                      <UniqueName>[Measures].[ActualWithBegin]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
+                    <ItemCaption>ActualWithBegin</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -4849,7 +4849,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
             </QuerySpecification>
             <Query>
               <Statement> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -4938,8 +4938,8 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="ActualWithBegin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ActualWithBegin]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -4962,7 +4962,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           </QueryParameter>
         </QueryParameters>
         <CommandText> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -5017,10 +5017,10 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                   </Item>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>ActualWithBegin</MeasureName>
+                      <UniqueName>[Measures].[ActualWithBegin]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
+                    <ItemCaption>ActualWithBegin</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -5043,7 +5043,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
             </QuerySpecification>
             <Query>
               <Statement> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -5132,8 +5132,8 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="ActualWithBegin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ActualWithBegin]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -5156,7 +5156,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           </QueryParameter>
         </QueryParameters>
         <CommandText> SELECT 
-NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
+NON EMPTY { [Measures].[ActualWithBegin] } ON COLUMNS 
 FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
@@ -5175,10 +5175,10 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
                 <Items>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>ActualWithBegin</MeasureName>
+                      <UniqueName>[Measures].[ActualWithBegin]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
+                    <ItemCaption>ActualWithBegin</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -5201,7 +5201,7 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
             </QuerySpecification>
             <Query>
               <Statement> SELECT 
-NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
+NON EMPTY { [Measures].[ActualWithBegin] } ON COLUMNS 
 FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
@@ -5275,8 +5275,8 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
         </rd:DesignerState>
       </Query>
       <Fields>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="ActualWithBegin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ActualWithBegin]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -5299,7 +5299,7 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
           </QueryParameter>
         </QueryParameters>
         <CommandText> SELECT 
-NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
+NON EMPTY { [Measures].[ActualWithBegin] } ON COLUMNS 
 FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
@@ -5318,10 +5318,10 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
                 <Items>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>ActualWithBegin</MeasureName>
+                      <UniqueName>[Measures].[ActualWithBegin]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
+                    <ItemCaption>ActualWithBegin</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -5344,7 +5344,7 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
             </QuerySpecification>
             <Query>
               <Statement> SELECT 
-NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
+NON EMPTY { [Measures].[ActualWithBegin] } ON COLUMNS 
 FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
@@ -5418,8 +5418,8 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
         </rd:DesignerState>
       </Query>
       <Fields>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="ActualWithBegin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ActualWithBegin]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -5442,7 +5442,7 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
           </QueryParameter>
         </QueryParameters>
         <CommandText> SELECT 
-NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
+NON EMPTY { [Measures].[ActualWithBegin] } ON COLUMNS 
 FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
@@ -5461,10 +5461,10 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
                 <Items>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>ActualWithBegin</MeasureName>
+                      <UniqueName>[Measures].[ActualWithBegin]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
+                    <ItemCaption>ActualWithBegin</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -5487,7 +5487,7 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
             </QuerySpecification>
             <Query>
               <Statement> SELECT 
-NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
+NON EMPTY { [Measures].[ActualWithBegin] } ON COLUMNS 
 FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
@@ -5561,8 +5561,8 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
         </rd:DesignerState>
       </Query>
       <Fields>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="ActualWithBegin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ActualWithBegin]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -5585,7 +5585,7 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
           </QueryParameter>
         </QueryParameters>
         <CommandText> SELECT 
-NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
+NON EMPTY { [Measures].[ActualWithBegin] } ON COLUMNS 
 FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
@@ -5605,10 +5605,10 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
                 <Items>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>ActualWithBegin</MeasureName>
+                      <UniqueName>[Measures].[ActualWithBegin]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
+                    <ItemCaption>ActualWithBegin</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -5631,7 +5631,7 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
             </QuerySpecification>
             <Query>
               <Statement> SELECT 
-NON EMPTY { [Measures].[Actual Amount] } ON COLUMNS 
+NON EMPTY { [Measures].[ActualWithBegin] } ON COLUMNS 
 FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
@@ -5706,8 +5706,8 @@ FROM [RLG-Finance]))))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&
         </rd:DesignerState>
       </Query>
       <Fields>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="ActualWithBegin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ActualWithBegin]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -5920,7 +5920,7 @@ FROM [RLG-Finance]</Statement>
           </QueryParameter>
         </QueryParameters>
         <CommandText> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -5978,10 +5978,10 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                   </Item>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>ActualWithBegin</MeasureName>
+                      <UniqueName>[Measures].[ActualWithBegin]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
+                    <ItemCaption>ActualWithBegin</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -6004,7 +6004,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
             </QuerySpecification>
             <Query>
               <Statement> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -6095,8 +6095,8 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="ActualWithBegin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ActualWithBegin]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -6119,7 +6119,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           </QueryParameter>
         </QueryParameters>
         <CommandText> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -6177,10 +6177,10 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
                   </Item>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>ActualWithBegin</MeasureName>
+                      <UniqueName>[Measures].[ActualWithBegin]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
+                    <ItemCaption>ActualWithBegin</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -6203,7 +6203,7 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
             </QuerySpecification>
             <Query>
               <Statement> SELECT  
-{ [Measures].[Actual Amount] } ON COLUMNS,  
+{ [Measures].[ActualWithBegin] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) * [Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key].ALLMEMBERS ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -6294,8 +6294,8 @@ FROM [RLG-Finance]))))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Account Alternate Key].[Account Alternate Key]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="ActualWithBegin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ActualWithBegin]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>

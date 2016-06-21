@@ -87,8 +87,16 @@
       <FullPath>16_PnLConsolidated.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>16_PnLConsolidated_With_Affiliate_Filter.rdl</Name>
+      <FullPath>16_PnLConsolidated_With_Affiliate_Filter.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>17_BL_Consolidated.rdl</Name>
       <FullPath>17_BL_Consolidated.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>17_BL_Consolidated_With_Affiliate.rdl</Name>
+      <FullPath>17_BL_Consolidated_With_Affiliate.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>18_BudgetVSForecastByTypeOfRevenue.rdl</Name>
@@ -129,10 +137,6 @@
     <ProjectItem>
       <Name>Copy (2) of 14_PnL_Standard_By_BusinessLevel.rdl</Name>
       <FullPath>Copy (2) of 14_PnL_Standard_By_BusinessLevel.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>16_PnLConsolidated_With_Affiliate_Filter.rdl</Name>
-      <FullPath>16_PnLConsolidated_With_Affiliate_Filter.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Copy (2) of PnL_Standard.rdl</Name>
@@ -391,8 +395,20 @@
       <FullPath>TestFilterforFilter.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>17_BL_Consolidated_With_Affiliate.rdl</Name>
-      <FullPath>17_BL_Consolidated_With_Affiliate.rdl</FullPath>
+      <Name>17_BL_Consolidated_With_Affiliate_Ending.rdl</Name>
+      <FullPath>17_BL_Consolidated_With_Affiliate_Ending.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Copy of 17_BL_Consolidated_With_Affiliate_Ending.rdl</Name>
+      <FullPath>Copy of 17_BL_Consolidated_With_Affiliate_Ending.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Cummu17_BL_Consolidated_With_Affiliate_Ending.rdl</Name>
+      <FullPath>Cummu17_BL_Consolidated_With_Affiliate_Ending.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Cummu17_BL_Consolidated_Ending.rdl</Name>
+      <FullPath>Cummu17_BL_Consolidated_Ending.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
