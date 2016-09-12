@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Parameters!DimCompanySegmentCompanySegment.Label</Value>
+                <Value>=trim(join(Parameters!DimCompanySegmentCompanySegment.Label,","))</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -142,7 +142,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Cumulative_Actual_Amount.Value)) / ReportItems!Textbox61.Value</Value>
+                              <Value>=Code.Num1Zero((Sum(Fields!Cumulative_Actual_Amount.Value)),ReportItems!Textbox61.Value)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>0.00%</Format>
@@ -210,7 +210,12 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Assets2")))/ReportItems!Textbox62.Value</Value>
+                              <Value>=
+Code.Num1Zero(
+(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Assets2")))
+,
+ReportItems!Textbox62.Value
+)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>0.00%</Format>
@@ -244,8 +249,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Assets")))
--(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Assets2")))</Value>
+                              <Value>=Code.NumBaseZero((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Assets")))
+,(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Assets2")))
+)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>#,0.00;(#,0.00)</Format>
@@ -279,9 +285,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Assets")))
--(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Assets2"))))
-/(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Assets2")))</Value>
+                              <Value>=Code.Num1Zero(
+(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Assets2")))
+,
+(Sum(Fields!Cumulative_Actual_Amount.Value))
+)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>0.00%</Format>
@@ -621,7 +629,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Cumulative_Actual_Amount.Value)) / ReportItems!Textbox77.Value</Value>
+                              <Value>=
+Code.Num1Zero((Sum(Fields!Cumulative_Actual_Amount.Value)),ReportItems!Textbox77.Value)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>0.00%</Format>
@@ -689,7 +698,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Liabilities2"))) / ReportItems!Textbox78.Value</Value>
+                              <Value>=Code.Num1Zero((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Liabilities2"))),ReportItems!Textbox78.Value)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>0.00%</Format>
@@ -723,8 +732,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Liabilities")))
--(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Liabilities2")))</Value>
+                              <Value>=Code.NumBaseZero((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Liabilities")))
+,(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Liabilities2")))
+)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>#,0.00;(#,0.00)</Format>
@@ -758,9 +768,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Liabilities")))
--(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Liabilities2"))))
-/(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Liabilities2")))</Value>
+                              <Value>=Code.Num1Zero(
+(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Liabilities2")))
+,
+(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Liabilities")))
+)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>0.00%</Format>
@@ -1016,7 +1028,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox61.Value - ReportItems!Textbox62.Value</Value>
+                <Value>=Code.NumBaseZero(ReportItems!Textbox61.Value , ReportItems!Textbox62.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -1202,7 +1214,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox77.Value - ReportItems!Textbox78.Value</Value>
+                <Value>=Code.NumBaseZero(ReportItems!Textbox77.Value , ReportItems!Textbox78.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -1286,7 +1298,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>="สำหรับ" &amp; " เดือน : " &amp; Parameters!FromDimTimeMonth.Label &amp; " ปี :" &amp; Parameters!DimTimeYear1.Label &amp; " เปรียบเทียบกับ  เดือน :" &amp; Parameters!ToDimTimeMonth.Label &amp; " ปี :" &amp; Parameters!DimTimeYear2.Label</Value>
+                <Value>="สำหรับ" &amp; " เดือน : " &amp; trim(join(Parameters!FromDimTimeMonth.Label,",")) &amp; " ปี :" &amp; Parameters!DimTimeYear1.Label &amp; " เปรียบเทียบกับ  เดือน :" &amp; trim(join(Parameters!ToDimTimeMonth.Label,",")) &amp; " ปี :" &amp; Parameters!DimTimeYear2.Label</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -1355,7 +1367,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Actual_Amount4">
+                    <Textbox Name="Actual_Amount5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1396,7 +1408,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Cumulative_Actual_Amount.Value)) / ReportItems!Textbox81.Value</Value>
+                              <Value>=Code.Num1Zero((Sum(Fields!Cumulative_Actual_Amount.Value)),ReportItems!Textbox81.Value)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>0.00%</Format>
@@ -1464,7 +1476,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Equity2"))) / ReportItems!Textbox82.Value</Value>
+                              <Value>=Code.Num1Zero((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Equity2"))),ReportItems!Textbox82.Value)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>0.00%</Format>
@@ -1498,8 +1510,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Equity")))
--(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Equity2")))</Value>
+                              <Value>=Code.NumBaseZero((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Equity")))
+,(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Equity2")))
+)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>#,0.00;(#,0.00)</Format>
@@ -1533,9 +1546,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Equity")))
--(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Equity2"))))
-/(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Equity2")))</Value>
+                              <Value>=Code.Num1Zero(
+(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Equity2")))
+,
+(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"Equity")))
+)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>0.00%</Format>
@@ -1669,7 +1684,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.62652in</Top>
+        <Top>4.15152in</Top>
         <Left>0.16542in</Left>
         <Height>0.25in</Height>
         <Width>3.70313in</Width>
@@ -1695,7 +1710,9 @@
 (
 (Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Cumulative_Actual_Amount.Value,"Equity"))) 
 + 
-(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Cumulative_Actual_Amount.Value,"PL")))
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!GL_Balance_Amount.Value,"PL")))
++
+Sum(Fields!Actual_Amount.Value, "NetPL")
 )</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
@@ -1710,7 +1727,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.62652in</Top>
+        <Top>4.15152in</Top>
         <Left>3.8623in</Left>
         <Height>0.25in</Height>
         <Width>1.57812in</Width>
@@ -1746,7 +1763,9 @@
 (
 (Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Cumulative_Actual_Amount.Value,"Equity2")))
 +
-(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Cumulative_Actual_Amount.Value,"PL2")))
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!GL_Balance_Amount.Value,"PL2")))
++
+Sum(Fields!Actual_Amount.Value, "NetPL2")
 )</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
@@ -1761,7 +1780,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.62791in</Top>
+        <Top>4.15291in</Top>
         <Left>6.16751in</Left>
         <Height>0.25in</Height>
         <Width>1.475in</Width>
@@ -1793,7 +1812,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=(ReportItems!Textbox66.Value - ReportItems!Textbox67.Value)</Value>
+                <Value>=Code.NumBaseZero(ReportItems!Textbox66.Value , ReportItems!Textbox67.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -1807,7 +1826,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.62791in</Top>
+        <Top>4.15291in</Top>
         <Left>8.34459in</Left>
         <Height>0.25in</Height>
         <Width>1.47153in</Width>
@@ -1855,7 +1874,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.24972in</Top>
+        <Top>4.77472in</Top>
         <Left>0.15292in</Left>
         <Height>0.25in</Height>
         <Width>3.70313in</Width>
@@ -1894,7 +1913,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.24972in</Top>
+        <Top>4.77472in</Top>
         <Left>3.8623in</Left>
         <Height>0.25in</Height>
         <Width>1.55798in</Width>
@@ -1937,7 +1956,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.24972in</Top>
+        <Top>4.77472in</Top>
         <Left>6.16751in</Left>
         <Height>0.25in</Height>
         <Width>1.475in</Width>
@@ -1963,7 +1982,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox70.Value - ReportItems!Textbox71.Value</Value>
+                <Value>=Code.NumBaseZero(ReportItems!Textbox70.Value , ReportItems!Textbox71.Value)</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Calibri</FontFamily>
@@ -1980,7 +1999,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.24972in</Top>
+        <Top>4.77472in</Top>
         <Left>8.3446in</Left>
         <Height>0.25in</Height>
         <Width>1.49374in</Width>
@@ -2022,7 +2041,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.56916in</Top>
+        <Top>5.09416in</Top>
         <Left>0.14667in</Left>
         <Height>0.25in</Height>
         <Width>3.70313in</Width>
@@ -2061,7 +2080,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.56916in</Top>
+        <Top>5.09416in</Top>
         <Left>3.85605in</Left>
         <Height>0.25in</Height>
         <Width>1.55798in</Width>
@@ -2105,7 +2124,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.56916in</Top>
+        <Top>5.09416in</Top>
         <Left>6.16126in</Left>
         <Height>0.25in</Height>
         <Width>1.475in</Width>
@@ -2132,7 +2151,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox74.Value - ReportItems!Textbox75.Value</Value>
+                <Value>=Code.NumBaseZero(ReportItems!Textbox74.Value , ReportItems!Textbox75.Value)</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Calibri</FontFamily>
@@ -2149,7 +2168,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.56916in</Top>
+        <Top>5.09416in</Top>
         <Left>8.33835in</Left>
         <Height>0.25in</Height>
         <Width>1.49374in</Width>
@@ -2190,7 +2209,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.24041in</Top>
+        <Top>3.76541in</Top>
         <Left>0.16542in</Left>
         <Height>0.25in</Height>
         <Width>3.70313in</Width>
@@ -2213,7 +2232,8 @@
             <TextRuns>
               <TextRun>
                 <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Cumulative_Actual_Amount.Value,"Equity"))) + 
-(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Cumulative_Actual_Amount.Value,"PL")))</Value>
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!GL_Balance_Amount.Value,"PL")))+
+Sum(Fields!Actual_Amount.Value, "NetPL")</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2227,7 +2247,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.24041in</Top>
+        <Top>3.76541in</Top>
         <Left>3.86855in</Left>
         <Height>0.25in</Height>
         <Width>1.57812in</Width>
@@ -2261,7 +2281,8 @@
               <TextRun>
                 <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[206]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Cumulative_Actual_Amount.Value,"Equity2")))
 +
-(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!Cumulative_Actual_Amount.Value,"PL2")))</Value>
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!GL_Balance_Amount.Value,"PL2")))+
+Sum(Fields!Actual_Amount.Value, "NetPL2")</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2275,7 +2296,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.25152in</Top>
+        <Top>3.77652in</Top>
         <Left>6.16751in</Left>
         <Height>0.25in</Height>
         <Width>1.48125in</Width>
@@ -2307,7 +2328,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=(ReportItems!Textbox81.Value - ReportItems!Textbox82.Value)</Value>
+                <Value>=Code.NumBaseZero(ReportItems!Textbox81.Value , ReportItems!Textbox82.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2321,7 +2342,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.24041in</Top>
+        <Top>3.77652in</Top>
         <Left>8.3446in</Left>
         <Height>0.25in</Height>
         <Width>1.47569in</Width>
@@ -2353,7 +2374,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox61.Value/ReportItems!Textbox61.Value</Value>
+                <Value>=
+Code.Num1Zero(ReportItems!Textbox61.Value, ReportItems!Textbox61.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2389,7 +2411,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox62.Value/ReportItems!Textbox62.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox62.Value,ReportItems!Textbox62.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2425,7 +2447,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox63.Value/ReportItems!Textbox62.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox63.Value,ReportItems!Textbox62.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2461,7 +2483,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox79.Value/ReportItems!Textbox78.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox79.Value,ReportItems!Textbox78.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2497,7 +2519,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox78.Value/ReportItems!Textbox78.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox78.Value,ReportItems!Textbox78.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2533,7 +2555,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox77.Value/ReportItems!Textbox77.Value</Value>
+                <Value>=
+Code.Num1Zero(ReportItems!Textbox77.Value,ReportItems!Textbox77.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2569,7 +2592,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox83.Value/ReportItems!Textbox82.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox83.Value,ReportItems!Textbox82.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2583,7 +2606,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.24318in</Top>
+        <Top>3.76818in</Top>
         <Left>9.83418in</Left>
         <Height>0.25in</Height>
         <Width>0.6875in</Width>
@@ -2605,7 +2628,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox82.Value/ReportItems!Textbox82.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox82.Value,ReportItems!Textbox82.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2619,7 +2642,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.25152in</Top>
+        <Top>3.77652in</Top>
         <Left>7.66266in</Left>
         <Height>0.25in</Height>
         <Width>0.68195in</Width>
@@ -2641,7 +2664,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox81.Value/ReportItems!Textbox81.Value</Value>
+                <Value>=
+Code.Num1Zero(ReportItems!Textbox81.Value,ReportItems!Textbox81.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2655,7 +2679,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.25152in</Top>
+        <Top>3.77652in</Top>
         <Left>5.44043in</Left>
         <Height>0.25in</Height>
         <Width>0.72709in</Width>
@@ -2677,7 +2701,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox68.Value/ReportItems!Textbox67.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox68.Value,ReportItems!Textbox67.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2691,7 +2715,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.62791in</Top>
+        <Top>4.15291in</Top>
         <Left>9.83418in</Left>
         <Height>0.25in</Height>
         <Width>0.6875in</Width>
@@ -2713,7 +2737,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox67.Value/ReportItems!Textbox67.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox67.Value,ReportItems!Textbox67.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2727,7 +2751,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.62791in</Top>
+        <Top>4.15291in</Top>
         <Left>7.66266in</Left>
         <Height>0.25in</Height>
         <Width>0.68195in</Width>
@@ -2749,7 +2773,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox66.Value/ReportItems!Textbox66.Value</Value>
+                <Value>=
+Code.Num1Zero(ReportItems!Textbox66.Value,ReportItems!Textbox66.Value)</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -2763,7 +2788,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>3.62791in</Top>
+        <Top>4.15291in</Top>
         <Left>5.44043in</Left>
         <Height>0.25in</Height>
         <Width>0.72709in</Width>
@@ -2785,7 +2810,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox72.Value/ReportItems!Textbox71.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox72.Value,ReportItems!Textbox71.Value)</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Calibri</FontFamily>
@@ -2802,7 +2827,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.24138in</Top>
+        <Top>4.76638in</Top>
         <Left>9.82792in</Left>
         <Height>0.25in</Height>
         <Width>0.6875in</Width>
@@ -2824,7 +2849,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox71.Value/ReportItems!Textbox71.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox71.Value,ReportItems!Textbox71.Value)</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Calibri</FontFamily>
@@ -2841,7 +2866,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.24972in</Top>
+        <Top>4.77472in</Top>
         <Left>7.6564in</Left>
         <Height>0.25in</Height>
         <Width>0.68195in</Width>
@@ -2863,7 +2888,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox70.Value/ReportItems!Textbox70.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox70.Value,ReportItems!Textbox70.Value)</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Calibri</FontFamily>
@@ -2880,7 +2905,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.24972in</Top>
+        <Top>4.77472in</Top>
         <Left>5.43417in</Left>
         <Height>0.25in</Height>
         <Width>0.72709in</Width>
@@ -2902,7 +2927,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox76.Value/ReportItems!Textbox75.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox76.Value,ReportItems!Textbox75.Value)</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Calibri</FontFamily>
@@ -2919,7 +2944,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.55944in</Top>
+        <Top>5.08444in</Top>
         <Left>9.84598in</Left>
         <Height>0.25in</Height>
         <Width>0.6875in</Width>
@@ -2941,7 +2966,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox75.Value/ReportItems!Textbox75.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox75.Value,ReportItems!Textbox75.Value)</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Calibri</FontFamily>
@@ -2958,7 +2983,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.56778in</Top>
+        <Top>5.09278in</Top>
         <Left>7.67446in</Left>
         <Height>0.25in</Height>
         <Width>0.68195in</Width>
@@ -2980,7 +3005,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=ReportItems!Textbox74.Value/ReportItems!Textbox74.Value</Value>
+                <Value>=Code.Num1Zero(ReportItems!Textbox74.Value,ReportItems!Textbox74.Value)</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Calibri</FontFamily>
@@ -2997,7 +3022,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>4.56778in</Top>
+        <Top>5.09278in</Top>
         <Left>5.45223in</Left>
         <Height>0.25in</Height>
         <Width>0.72709in</Width>
@@ -3047,7 +3072,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Cumulative_Actual_Amount.Value)</Value>
+                              <Value>=Sum(Fields!GL_Balance_Amount.Value)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>#,0.00;(#,0.00)</Format>
@@ -3081,7 +3106,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Cumulative_Actual_Amount.Value)) / ReportItems!Textbox81.Value</Value>
+                              <Value>=
+Code.Num1Zero((Sum(Fields!GL_Balance_Amount.Value)),ReportItems!Textbox81.Value)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>0.00%</Format>
@@ -3115,7 +3141,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"PL2"))</Value>
+                              <Value>=Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!GL_Balance_Amount.Value,"PL2"))</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>#,0.00;(#,0.00)</Format>
@@ -3149,7 +3175,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"PL2"))) / ReportItems!Textbox82.Value</Value>
+                              <Value>=Code.Num1Zero((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!GL_Balance_Amount.Value,"PL2"))),ReportItems!Textbox82.Value)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>0.00%</Format>
@@ -3183,8 +3209,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"PL")))
--(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"PL2")))</Value>
+                              <Value>=Code.NumBaseZero((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!GL_Balance_Amount.Value,"PL")))
+,(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!GL_Balance_Amount.Value,"PL2")))
+)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>#,0.00;(#,0.00)</Format>
@@ -3218,9 +3245,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=((Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"PL")))
--(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"PL2"))))
-/(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!Cumulative_Actual_Amount.Value,"PL2")))</Value>
+                              <Value>=Code.Num1Zero(
+(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!GL_Balance_Amount.Value,"PL2")))
+,
+(Code.SumLookup(LOOKUPSET(Fields!Parent_Account_Key.UniqueName, Fields!Parent_Account_Key.UniqueName, Fields!GL_Balance_Amount.Value,"PL")))
+)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <Format>0.00%</Format>
@@ -3333,8 +3362,508 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox108">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>กำไร(ขาดทุน)สะสมทั้งสิ้น</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.445in</Top>
+        <Left>0.16542in</Left>
+        <Height>0.25in</Height>
+        <Width>3.70313in</Width>
+        <ZIndex>50</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>34pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox109">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!GL_Balance_Amount.Value,"PL")))
++Sum(Fields!Actual_Amount.Value, "NetPL")</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <Format>#,0.00;(#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.445in</Top>
+        <Left>3.86855in</Left>
+        <Height>0.25in</Height>
+        <Width>1.57812in</Width>
+        <ZIndex>51</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox110">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Code.Num1Zero(
+(
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!GL_Balance_Amount.Value,"PL")))
++Sum(Fields!Actual_Amount.Value, "NetPL")
+)
+,ReportItems!Textbox81.Value)</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <Format>#,0.00%</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.445in</Top>
+        <Left>5.44043in</Left>
+        <Height>0.25in</Height>
+        <Width>0.72709in</Width>
+        <ZIndex>52</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox111">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!GL_Balance_Amount.Value,"PL2")))
++Sum(Fields!Actual_Amount.Value, "NetPL2")</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <Format>#,0.00;(#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.445in</Top>
+        <Left>6.16751in</Left>
+        <Height>0.25in</Height>
+        <Width>1.48125in</Width>
+        <ZIndex>53</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox112">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Code.Num1Zero(
+(
+(Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[517]"+Parameters!DimTimeYear2.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear2.Value, Fields!GL_Balance_Amount.Value,"PL2")))
++Sum(Fields!Actual_Amount.Value, "NetPL2")
+)
+,ReportItems!Textbox82.Value)</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <Format>#,0.00%</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.445in</Top>
+        <Left>7.66266in</Left>
+        <Height>0.25in</Height>
+        <Width>0.68195in</Width>
+        <ZIndex>54</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox113">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Code.NumBaseZero(ReportItems!Textbox109.Value , ReportItems!Textbox111.Value)</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <Format>#,0.00;(#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.445in</Top>
+        <Left>8.3446in</Left>
+        <Height>0.25in</Height>
+        <Width>1.47569in</Width>
+        <ZIndex>55</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox114">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Code.Num1Zero(ReportItems!Textbox113.Value,ReportItems!Textbox111.Value)</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <Format>#,0.00%</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.445in</Top>
+        <Left>9.83418in</Left>
+        <Height>0.25in</Height>
+        <Width>0.6875in</Width>
+        <ZIndex>56</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox115">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>กำไร(ขาดทุน)สุทธิประจำปี</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.155in</Top>
+        <Left>0.16542in</Left>
+        <Height>0.25in</Height>
+        <Width>3.70313in</Width>
+        <ZIndex>57</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>34pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox116">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Code.Num1Zero(Sum(Fields!Actual_Amount.Value, "NetPL"),ReportItems!Textbox81.Value)</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <Format>#,0.00%</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.155in</Top>
+        <Left>5.44043in</Left>
+        <Height>0.25in</Height>
+        <Width>0.72709in</Width>
+        <ZIndex>58</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox117">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!Actual_Amount.Value, "NetPL2")</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <Format>#,0.00;(#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.155in</Top>
+        <Left>6.16751in</Left>
+        <Height>0.25in</Height>
+        <Width>1.48125in</Width>
+        <ZIndex>59</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox118">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Code.Num1Zero(Sum(Fields!Actual_Amount.Value, "NetPL"),ReportItems!Textbox82.Value)</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <Format>#,0.00%</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.155in</Top>
+        <Left>7.66266in</Left>
+        <Height>0.25in</Height>
+        <Width>0.68195in</Width>
+        <ZIndex>60</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox119">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Code.NumBaseZero(ReportItems!Textbox121.Value , ReportItems!Textbox117.Value)</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <Format>#,0.00;(#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.155in</Top>
+        <Left>8.3446in</Left>
+        <Height>0.25in</Height>
+        <Width>1.47569in</Width>
+        <ZIndex>61</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox120">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Code.Num1Zero(ReportItems!Textbox119.Value,ReportItems!Textbox117.Value)</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <Format>#,0.00%</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.155in</Top>
+        <Left>9.83418in</Left>
+        <Height>0.25in</Height>
+        <Width>0.6875in</Width>
+        <ZIndex>62</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox121">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!Actual_Amount.Value, "NetPL")</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <Format>#,0.00;(#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox60</rd:DefaultName>
+        <Top>3.155in</Top>
+        <Left>3.86855in</Left>
+        <Height>0.25in</Height>
+        <Width>1.57812in</Width>
+        <ZIndex>63</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>5.58277in</Height>
+    <Height>5.69416in</Height>
     <Style>
       <Border>
         <Style>None</Style>
@@ -3355,6 +3884,14 @@
       <DataSourceReference>DS</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>188ef996-ab64-4008-ba17-35669e446ba7</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="DBOracle">
+      <ConnectionProperties>
+        <DataProvider>ORACLE</DataProvider>
+        <ConnectString>Data Source=RLG_PROD;Unicode=True</ConnectString>
+      </ConnectionProperties>
+      <rd:SecurityType>DataBase</rd:SecurityType>
+      <rd:DataSourceID>e30adbf7-1414-4f9c-8161-15978c1701af</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -3559,7 +4096,14 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
     <DataSet Name="DimCompanySegmentCompanySegment">
       <Query>
         <DataSourceName>DataSource1</DataSourceName>
-        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Company Segment].[Company Segement Desc].ALLMEMBERS ON ROWS FROM [RLG-Finance]</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="ParamFilterCompanySegmentValue">
+            <Value>=Parameters!ParamFilterCompanySegmentValue.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Company Segment].[Company Segement Desc].ALLMEMBERS ON ROWS 
+FROM ( SELECT ( STRTOSET(@ParamFilterCompanySegmentValue, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance])</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -3567,6 +4111,16 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
             <QuerySpecification xsi:type="MDXQuerySpecification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <Select>
                 <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Company Segment</DimensionName>
+                      <HierarchyName>Company Segement Desc</HierarchyName>
+                      <HierarchyUniqueName>[Dim Company Segment].[Company Segement Desc]</HierarchyUniqueName>
+                      <LevelName>Company Segement Desc</LevelName>
+                      <UniqueName>[Dim Company Segment].[Company Segement Desc].[Company Segement Desc]</UniqueName>
+                    </ID>
+                    <ItemCaption>Company Segement Desc</ItemCaption>
+                  </Item>
                   <Item>
                     <ID xsi:type="Measure">
                       <MeasureName>ParameterCaption</MeasureName>
@@ -3602,15 +4156,39 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
               <QueryProperties />
             </QuerySpecification>
             <Query>
-              <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Company Segment].[Company Segement Desc].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
-              <ParameterDefinitions />
+              <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Company Segment].[Company Segement Desc].ALLMEMBERS ON ROWS 
+FROM ( SELECT ( STRTOSET(@ParamFilterCompanySegmentValue, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance])</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>ParamFilterCompanySegmentValue</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Company Segment].[Company Segement Desc].&amp;[1]</DefaultValue>
+                    <DefaultValue>[Dim Company Segment].[Company Segement Desc].&amp;[2]</DefaultValue>
+                    <DefaultValue>[Dim Company Segment].[Company Segement Desc].&amp;[3]</DefaultValue>
+                    <DefaultValue>[Dim Company Segment].[Company Segement Desc].&amp;[4]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>ParamFilterCompanySegmentValue</Caption>
+                  <HierarchyUniqueName>[Dim Company Segment].[Company Segement Desc]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Company Segment].[Company Segement Desc].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+              </ParameterDefinitions>
             </Query>
           </QueryDefinition>
         </rd:DesignerState>
-        <rd:AutoGenerated>true</rd:AutoGenerated>
         <rd:Hidden>true</rd:Hidden>
       </Query>
       <Fields>
+        <Field Name="Company_Segement_Desc">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Company Segment].[Company Segement Desc].[Company Segement Desc]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ParameterCaption">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -5095,7 +5673,7 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
 
  SELECT 
 NON EMPTY { [Measures].[Actual Amount],[Measures].[Cumulative Actual Amount] } ON COLUMNS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
@@ -5159,7 +5737,7 @@ FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&a
 
  SELECT 
 NON EMPTY { [Measures].[Actual Amount],[Measures].[Cumulative Actual Amount] } ON COLUMNS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
@@ -5246,7 +5824,7 @@ FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&a
 
  SELECT 
 NON EMPTY { [Measures].[Actual Amount],[Measures].[Cumulative Actual Amount] } ON COLUMNS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
@@ -5310,7 +5888,7 @@ FROM [RLG-Finance])))) WHERE ( [Dim Lay Out PL Standard].[Parent Account Key].&a
 
  SELECT 
 NON EMPTY { [Measures].[Actual Amount],[Measures].[Cumulative Actual Amount] } ON COLUMNS 
-FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[213] } ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Standard].[Parent Account Key].&amp;[211] } ) ON COLUMNS 
 
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegment, CONSTRAINED) ) ON COLUMNS
 
@@ -5834,11 +6412,9 @@ FROM [RLG-Finance]</Statement>
             <Value>=Parameters!FromDimTimeMonth.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>WITH MEMBER [Measures].[Cumulative Actual Amount] AS
-    SUM({null:[Dim Time].[Year].CurrentMember},[Measures].[Actual Amount])
-
+        <CommandText>
  SELECT  
-{ [Measures].[Actual Amount],[Measures].[Cumulative Actual Amount] } ON COLUMNS,  
+{ [Measures].[GL Balance Amount] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -5885,26 +6461,10 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
                   </Item>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>GL Balance Amount</MeasureName>
+                      <UniqueName>[Measures].[GL Balance Amount]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
-                    <BackColor>true</BackColor>
-                    <ForeColor>true</ForeColor>
-                    <FontFamily>true</FontFamily>
-                    <FontSize>true</FontSize>
-                    <FontWeight>true</FontWeight>
-                    <FontStyle>true</FontStyle>
-                    <FontDecoration>true</FontDecoration>
-                    <FormattedValue>true</FormattedValue>
-                    <FormatString>true</FormatString>
-                  </Item>
-                  <Item>
-                    <ID xsi:type="Measure">
-                      <MeasureName>Cumulative Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Cumulative Actual Amount]</UniqueName>
-                    </ID>
-                    <ItemCaption>Cumulative Actual Amount</ItemCaption>
+                    <ItemCaption>GL Balance Amount</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -5926,11 +6486,9 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
               <QueryProperties />
             </QuerySpecification>
             <Query>
-              <Statement>WITH MEMBER [Measures].[Cumulative Actual Amount] AS
-    SUM({null:[Dim Time].[Year].CurrentMember},[Measures].[Actual Amount])
-
+              <Statement>
  SELECT  
-{ [Measures].[Actual Amount],[Measures].[Cumulative Actual Amount] } ON COLUMNS,  
+{ [Measures].[GL Balance Amount] } ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -6002,12 +6560,8 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Parent Account Key]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Cumulative_Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Cumulative Actual Amount]" /&gt;</DataField>
+        <Field Name="GL_Balance_Amount">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[GL Balance Amount]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -6026,11 +6580,9 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
             <Value>=Parameters!ToDimTimeMonth.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>WITH MEMBER [Measures].[Cumulative Actual Amount] AS
-    SUM({null:[Dim Time].[Year].CurrentMember},[Measures].[Actual Amount])
-
+        <CommandText>
  SELECT  
-{ [Measures].[Actual Amount],[Measures].[Cumulative Actual Amount] } ON COLUMNS,  
+{ [Measures].[GL Balance Amount]} ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -6077,26 +6629,10 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
                   </Item>
                   <Item>
                     <ID xsi:type="Measure">
-                      <MeasureName>Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Actual Amount]</UniqueName>
+                      <MeasureName>GL Balance Amount</MeasureName>
+                      <UniqueName>[Measures].[GL Balance Amount]</UniqueName>
                     </ID>
-                    <ItemCaption>Actual Amount</ItemCaption>
-                    <BackColor>true</BackColor>
-                    <ForeColor>true</ForeColor>
-                    <FontFamily>true</FontFamily>
-                    <FontSize>true</FontSize>
-                    <FontWeight>true</FontWeight>
-                    <FontStyle>true</FontStyle>
-                    <FontDecoration>true</FontDecoration>
-                    <FormattedValue>true</FormattedValue>
-                    <FormatString>true</FormatString>
-                  </Item>
-                  <Item>
-                    <ID xsi:type="Measure">
-                      <MeasureName>Cumulative Actual Amount</MeasureName>
-                      <UniqueName>[Measures].[Cumulative Actual Amount]</UniqueName>
-                    </ID>
-                    <ItemCaption>Cumulative Actual Amount</ItemCaption>
+                    <ItemCaption>GL Balance Amount</ItemCaption>
                     <BackColor>true</BackColor>
                     <ForeColor>true</ForeColor>
                     <FontFamily>true</FontFamily>
@@ -6118,11 +6654,9 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
               <QueryProperties />
             </QuerySpecification>
             <Query>
-              <Statement>WITH MEMBER [Measures].[Cumulative Actual Amount] AS
-    SUM({null:[Dim Time].[Year].CurrentMember},[Measures].[Actual Amount])
-
+              <Statement>
  SELECT  
-{ [Measures].[Actual Amount],[Measures].[Cumulative Actual Amount] } ON COLUMNS,  
+{ [Measures].[GL Balance Amount]} ON COLUMNS,  
 { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Standard].[Parent Account Key].[Level 03].ALLMEMBERS) ) } 
 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
@@ -6194,18 +6728,108 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Lay Out PL Standard].[Parent Account Key]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Actual Amount]" /&gt;</DataField>
+        <Field Name="GL_Balance_Amount">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[GL Balance Amount]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Cumulative_Actual_Amount">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Cumulative Actual Amount]" /&gt;</DataField>
+      </Fields>
+    </DataSet>
+    <DataSet Name="ParamFilterCompanySegmentValue">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Company Segment].[Company Segement Desc].ALLMEMBERS ON ROWS FROM [RLG-Finance]</CommandText>
+        <rd:DesignerState>
+          <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterCaption</MeasureName>
+                      <UniqueName>[Measures].[ParameterCaption]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterCaption</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterValue</MeasureName>
+                      <UniqueName>[Measures].[ParameterValue]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterValue</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterLevel</MeasureName>
+                      <UniqueName>[Measures].[ParameterLevel]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterLevel</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                </Items>
+              </Select>
+              <From>RLG-Finance</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Company Segment].[Company Segement Desc].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Company Segment].[Company Segement Desc].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+              <ParameterDefinitions />
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+      <Fields>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
   </DataSets>
   <ReportParameters>
+    <ReportParameter Name="ParamFilterCompanySegmentValue">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Dim Company Segment].[Company Segement Desc].&amp;[1]</Value>
+          <Value>[Dim Company Segment].[Company Segement Desc].&amp;[2]</Value>
+          <Value>[Dim Company Segment].[Company Segement Desc].&amp;[3]</Value>
+          <Value>[Dim Company Segment].[Company Segement Desc].&amp;[4]</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ParamFilterCompanySegmentValue</Prompt>
+      <Hidden>true</Hidden>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>ParamFilterCompanySegmentValue</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
     <ReportParameter Name="DimCompanySegmentCompanySegment">
       <DataType>String</DataType>
       <DefaultValue>
@@ -6221,6 +6845,7 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
           <LabelField>ParameterCaptionIndented</LabelField>
         </DataSetReference>
       </ValidValues>
+      <MultiValue>true</MultiValue>
     </ReportParameter>
     <ReportParameter Name="FromDimTimeYear">
       <DataType>String</DataType>
@@ -6271,6 +6896,7 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
           <LabelField>ParameterCaptionIndented</LabelField>
         </DataSetReference>
       </ValidValues>
+      <MultiValue>true</MultiValue>
     </ReportParameter>
     <ReportParameter Name="ToDimTimeYear">
       <DataType>String</DataType>
@@ -6321,6 +6947,7 @@ FROM [RLG-Finance])))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_
           <LabelField>ParameterCaptionIndented</LabelField>
         </DataSetReference>
       </ValidValues>
+      <MultiValue>true</MultiValue>
     </ReportParameter>
     <ReportParameter Name="DimTimeHierarchy">
       <DataType>String</DataType>
@@ -6368,6 +6995,64 @@ Else
 Return DivideByZeroDefault
 End If
 End Function
+
+Function CHPT(ByVal num1 As Object, ByVal num2 As Object) As Object
+Dim suma1 As Decimal = New Decimal()
+suma1 =0
+If (num1 = 0 and num2 =0) then
+	suma1 = 0
+else
+     if (num2 = 0) then
+	suma1 = 0	
+     else
+	suma1 = (num1 - num2)/num2	
+     end if	
+End If
+Return suma1
+End Function
+
+Function Num1Zero(ByVal num1 As Object, ByVal num2 As Object) As Object
+Dim suma1 As Decimal = New Decimal()
+suma1 =0
+If (num1 = 0 and num2 = 0) then
+	suma1 = 0
+else
+	If (num1 = 0 ) then
+		suma1 = 0
+	else
+                        if (num2 = 0 ) then
+                               suma1 = 0
+                        else
+		suma1 = num1/num2
+                        end if 	
+	end if
+End If
+Return suma1
+End Function
+
+Function NumBaseZero(ByVal numThisYear As Object, ByVal numBase As Object) As Object
+Dim suma2 As Decimal  = New Decimal()
+suma2 = 0
+if (numBase = 0) then
+    suma2 = 0
+else
+      suma2 = numThisYear - numBase
+end if
+Return suma2
+End Function
+
+Function PlusPLbyYear(ByVal AccumPL As Object,ByVal PLFinal as Object, ByVal AccNo As Object) As Object
+Dim PLSum As Decimal = New Decimal()
+PLSum = 0
+if (AccNo = "322001 - กำไรสะสม") then
+    PLSum = AccumPL + PLFinal
+else
+    PLSum = AccumPL
+end if
+Return PLSum
+End Function
+
+
 </Code>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>7b5e6e8b-80e4-463b-b059-1d7dfb71da7c</rd:ReportID>

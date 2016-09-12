@@ -366,6 +366,9 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
                                   <Parameter Name="ToDimTimeDate">
                                     <Value>=Parameters!ToDimTimeDate.Value</Value>
                                   </Parameter>
+                                  <Parameter Name="BizClusterVersion">
+                                    <Value>=Parameters!BizClusterVersion.Value</Value>
+                                  </Parameter>
                                 </Parameters>
                               </Drillthrough>
                             </Action>
@@ -473,7 +476,7 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Revenue</DataSetName>
-        <Top>1.56458in</Top>
+        <Top>1.86458in</Top>
         <Height>0.5in</Height>
         <Width>7.91667in</Width>
         <Visibility>
@@ -1000,7 +1003,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>CostOfSale</DataSetName>
-        <Top>2.06285in</Top>
+        <Top>2.36285in</Top>
         <Height>0.5in</Height>
         <Width>7.91667in</Width>
         <ZIndex>1</ZIndex>
@@ -1527,7 +1530,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>SellingExpense</DataSetName>
-        <Top>2.56076in</Top>
+        <Top>2.86076in</Top>
         <Height>0.5in</Height>
         <Width>7.91667in</Width>
         <ZIndex>2</ZIndex>
@@ -2070,7 +2073,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>AdministrativeExpense</DataSetName>
-        <Top>3.56077in</Top>
+        <Top>3.86077in</Top>
         <Height>0.5in</Height>
         <Width>7.91667in</Width>
         <ZIndex>3</ZIndex>
@@ -2118,7 +2121,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
         </Style>
       </Textbox>
       <Line Name="Line5">
-        <Top>1.47778in</Top>
+        <Top>1.77778in</Top>
         <Height>0in</Height>
         <Width>10.17646in</Width>
         <ZIndex>5</ZIndex>
@@ -2648,7 +2651,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>ManagementSalary</DataSetName>
-        <Top>3.06476in</Top>
+        <Top>3.36476in</Top>
         <Height>0.5in</Height>
         <Width>7.91667in</Width>
         <ZIndex>6</ZIndex>
@@ -3201,7 +3204,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>SpecialRevenue</DataSetName>
-        <Top>4.05851in</Top>
+        <Top>4.35851in</Top>
         <Height>0.5in</Height>
         <Width>7.91667in</Width>
         <ZIndex>7</ZIndex>
@@ -4684,7 +4687,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Invoice</DataSetName>
-        <Top>4.55851in</Top>
+        <Top>4.85851in</Top>
         <Height>1.5in</Height>
         <Width>7.91667in</Width>
         <ZIndex>8</ZIndex>
@@ -4836,8 +4839,42 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox46">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Print Date : " &amp; format(now,"dd/MM/yyyy hh:mm tt")</Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>1.46111in</Top>
+        <Height>0.25in</Height>
+        <Width>3.41792in</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>6.05851in</Height>
+    <Height>6.55851in</Height>
     <Style />
   </Body>
   <Width>10.17646in</Width>
@@ -8702,6 +8739,11 @@ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, F
     <DataSet Name="DimBusinessClusterBusinessCluster">
       <Query>
         <DataSourceName>DS</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
         <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Business Cluster].CURRENTMEMBER.MEMBER_CAPTION 
 MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Business Cluster].CURRENTMEMBER.UNIQUENAME 
 MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Business Cluster].CURRENTMEMBER.LEVEL.ORDINAL 
@@ -8709,8 +8751,8 @@ MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Business Cluster].
 SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS 
 
 , [Dim Business Cluster].[Business Cluster].ALLMEMBERS ON ROWS 
-
-FROM [RLG-Finance]</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS 
+FROM [RLG-Finance])</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -8770,9 +8812,24 @@ MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Business Cluster].
 SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS 
 
 , [Dim Business Cluster].[Business Cluster].ALLMEMBERS ON ROWS 
-
-FROM [RLG-Finance]</Statement>
-              <ParameterDefinitions />
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS 
+FROM [RLG-Finance])</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
+              </ParameterDefinitions>
             </Query>
           </QueryDefinition>
         </rd:DesignerState>
@@ -9437,6 +9494,22 @@ FROM [RLG-Finance]))</Statement>
     </DataSet>
   </DataSets>
   <ReportParameters>
+    <ReportParameter Name="BizClusterVersion">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Dim Business Cluster].[Version].&amp;[Since 2016]</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>BizClusterVersion</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>BizClusterVersion</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
     <ReportParameter Name="DimBusinessClusterBusinessCluster">
       <DataType>String</DataType>
       <DefaultValue>
@@ -9476,7 +9549,7 @@ FROM [RLG-Finance]))</Statement>
           <Value>[Dim Business Cluster].[BU Group].[All]</Value>
         </Values>
       </DefaultValue>
-      <Prompt>BU Group</Prompt>
+      <Prompt>Business Unit</Prompt>
       <ValidValues>
         <DataSetReference>
           <DataSetName>DimBusinessClusterBUGroup</DataSetName>
@@ -9502,22 +9575,6 @@ FROM [RLG-Finance]))</Statement>
         </Values>
       </DefaultValue>
       <Prompt>To Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="BizClusterVersion">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>[Dim Business Cluster].[Version].&amp;[Null]</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>BizClusterVersion</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>BizClusterVersion</DataSetName>
-          <ValueField>ParameterValue</ValueField>
-          <LabelField>ParameterCaptionIndented</LabelField>
-        </DataSetReference>
-      </ValidValues>
     </ReportParameter>
   </ReportParameters>
   <Code>Function SumLookup(ByVal items As Object()) As Decimal

@@ -365,7 +365,7 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>= (Sum(Fields!Budget_Amount1.Value)- Sum(Fields!Actual_Amount1.Value)) / Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>= Code.Num1Zero((Sum(Fields!Budget_Amount1.Value)- Sum(Fields!Actual_Amount1.Value)) , Sum(Fields!Budget_Amount1.Value))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -958,9 +958,9 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Budget_Amount1.Value) - (Sum(Fields!Actual_Amount1.Value)*-1)) / 
+                              <Value>=Code.Num1Zero((Sum(Fields!Budget_Amount1.Value) - (Sum(Fields!Actual_Amount1.Value)*-1)) , 
 
-Sum(Fields!Budget_Amount1.Value)</Value>
+Sum(Fields!Budget_Amount1.Value))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -1198,8 +1198,8 @@ ReportItems!Textbox97.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox149.Value - ReportItems!Textbox97.Value) / 
-ReportItems!Textbox149.Value</Value>
+                              <Value>=Code.Num1Zero((ReportItems!Textbox149.Value - ReportItems!Textbox97.Value) , 
+ReportItems!Textbox149.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -1653,8 +1653,8 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Budget_Amount1.Value)-  (Sum(Fields!Actual_Amount1.Value)*-1)) / 
-Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>=Code.Num1Zero((Sum(Fields!Budget_Amount1.Value)-  (Sum(Fields!Actual_Amount1.Value)*-1)) , 
+Sum(Fields!Budget_Amount1.Value))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -1897,9 +1897,9 @@ Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account K
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox185.Value - ReportItems!Textbox36.Value) / 
+                              <Value>=Code.Num1Zero((ReportItems!Textbox185.Value - ReportItems!Textbox36.Value) , 
 
-ReportItems!Textbox185.Value</Value>
+ReportItems!Textbox185.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -2352,8 +2352,8 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Budget_Amount1.Value) - Sum(Fields!Actual_Amount1.Value)) / 
-Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>=Code.Num1Zero((Sum(Fields!Budget_Amount1.Value) - Sum(Fields!Actual_Amount1.Value)) , 
+Sum(Fields!Budget_Amount1.Value))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -2611,8 +2611,8 @@ ReportItems!Textbox55.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox204.Value - ReportItems!Textbox55.Value) / 
-ReportItems!Textbox204.Value</Value>
+                              <Value>=Code.Num1Zero((ReportItems!Textbox204.Value - ReportItems!Textbox55.Value) , 
+ReportItems!Textbox204.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -3112,8 +3112,8 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Budget_Amount1.Value) - (Sum(Fields!Actual_Amount1.Value)*-1)) / 
-Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>=Code.Num1Zero((Sum(Fields!Budget_Amount1.Value) - (Sum(Fields!Actual_Amount1.Value)*-1)) , 
+Sum(Fields!Budget_Amount1.Value))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -3360,8 +3360,8 @@ ReportItems!Textbox44.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox8.Value - ReportItems!Textbox44.Value) / 
-ReportItems!Textbox8.Value</Value>
+                              <Value>=Code.Num1Zero((ReportItems!Textbox8.Value - ReportItems!Textbox44.Value) , 
+ReportItems!Textbox8.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -3814,8 +3814,8 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Budget_Amount1.Value) - Sum(Fields!Actual_Amount1.Value)) / 
-Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>=Code.Num1Zero((Sum(Fields!Budget_Amount1.Value) - Sum(Fields!Actual_Amount1.Value)) , 
+Sum(Fields!Budget_Amount1.Value))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -4082,8 +4082,8 @@ ReportItems!Textbox65.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox93.Value - ReportItems!Textbox65.Value) / 
-ReportItems!Textbox93.Value</Value>
+                              <Value>=Code.Num1Zero((ReportItems!Textbox93.Value - ReportItems!Textbox65.Value) , 
+ReportItems!Textbox93.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -4333,7 +4333,6 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -4384,7 +4383,6 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -4431,7 +4429,6 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -4482,7 +4479,6 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -4529,7 +4525,6 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -4541,8 +4536,8 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(Sum(Fields!Budget_Amount1.Value) - Sum(Fields!Actual_Amount1.Value)) / 
-Sum(Fields!Budget_Amount1.Value)</Value>
+                              <Value>=Code.Num1Zero((Sum(Fields!Budget_Amount1.Value) - Sum(Fields!Actual_Amount1.Value)) , 
+Sum(Fields!Budget_Amount1.Value))</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -4577,7 +4572,6 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -4848,8 +4842,8 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox23.Value - ReportItems!Textbox74.Value) / 
-ReportItems!Textbox23.Value</Value>
+                              <Value>=Code.Num1Zero((ReportItems!Textbox23.Value - ReportItems!Textbox74.Value) , 
+ReportItems!Textbox23.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -5078,8 +5072,8 @@ ReportItems!Textbox10.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox4.Value - ReportItems!Textbox10.Value) / 
-ReportItems!Textbox4.Value</Value>
+                              <Value>=Code.Num1Zero((ReportItems!Textbox4.Value - ReportItems!Textbox10.Value) , 
+ReportItems!Textbox4.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -5352,8 +5346,8 @@ ReportItems!Textbox24.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox20.Value - ReportItems!Textbox24.Value) /
-ReportItems!Textbox20.Value</Value>
+                              <Value>=Code.Num1Zero((ReportItems!Textbox20.Value - ReportItems!Textbox24.Value) ,
+ReportItems!Textbox20.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -5576,8 +5570,8 @@ ReportItems!Textbox75.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox9.Value - ReportItems!Textbox75.Value) / 
-ReportItems!Textbox9.Value</Value>
+                              <Value>=Code.Num1Zero((ReportItems!Textbox9.Value - ReportItems!Textbox75.Value) , 
+ReportItems!Textbox9.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -5859,8 +5853,8 @@ ReportItems!Textbox76.Value
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=(ReportItems!Textbox88.Value - ReportItems!Textbox76.Value) / 
-ReportItems!Textbox88.Value</Value>
+                              <Value>=Code.Num1Zero((ReportItems!Textbox88.Value - ReportItems!Textbox76.Value) , 
+ReportItems!Textbox88.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -11321,7 +11315,23 @@ If Denominator &lt;&gt; 0 Then
 Else
 Return DivideByZeroDefault
 End If
-End Function</Code>
+End Function
+
+Function Num1Zero(ByVal num1 As Object, ByVal num2 As Object) As Object
+Dim suma1 As Decimal = New Decimal()
+suma1 =0
+If (num1 = 0 and num2 = 0) then
+	suma1 = 0
+else
+	If (num1 = 0 ) then
+		suma1 = 0
+	else
+		suma1 = num1/num2	
+	end if
+End If
+Return suma1
+End Function
+</Code>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>b5c35af4-a101-42fc-931f-271c3f11741a</rd:ReportID>
 </Report>

@@ -54,10 +54,10 @@
               <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.16667in</Width>
+              <Width>1.16in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.54167in</Width>
+              <Width>0.53in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -399,6 +399,9 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
                                   <Parameter Name="ToDimTimeDate">
                                     <Value>=Parameters!ToDimTimeDate.Value</Value>
                                   </Parameter>
+                                  <Parameter Name="BizClusterVersion">
+                                    <Value>=Parameters!BizClusterVersion.Value</Value>
+                                  </Parameter>
                                 </Parameters>
                               </Drillthrough>
                             </Action>
@@ -448,7 +451,7 @@ OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label)
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Parent_Account_Key">
                     <CanGrow>true</CanGrow>
@@ -507,9 +510,9 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Revenue</DataSetName>
-        <Top>0.97708in</Top>
+        <Top>1.23958in</Top>
         <Height>0.5in</Height>
-        <Width>6.62501in</Width>
+        <Width>6.6in</Width>
         <Visibility>
           <Hidden>=IIF(Globals!RenderFormat.Name="EXCEL",True,False)</Hidden>
         </Visibility>
@@ -529,10 +532,10 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
               <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.16667in</Width>
+              <Width>1.16in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.54167in</Width>
+              <Width>0.53in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -941,7 +944,7 @@ OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label)
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Parent_Account_Key2">
                     <CanGrow>true</CanGrow>
@@ -995,7 +998,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Textbox148">
                     <CanGrow>true</CanGrow>
@@ -1035,9 +1038,9 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>CostOfSale</DataSetName>
-        <Top>1.47535in</Top>
+        <Top>1.73785in</Top>
         <Height>0.5in</Height>
-        <Width>6.62501in</Width>
+        <Width>6.6in</Width>
         <ZIndex>1</ZIndex>
         <Visibility>
           <Hidden>=IIF(Globals!RenderFormat.Name="EXCEL",True,False)</Hidden>
@@ -1058,10 +1061,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
               <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.16667in</Width>
+              <Width>1.16in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.54167in</Width>
+              <Width>0.53in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1470,7 +1473,7 @@ OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label)
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Parent_Account_Key3">
                     <CanGrow>true</CanGrow>
@@ -1523,7 +1526,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Textbox155">
                     <CanGrow>true</CanGrow>
@@ -1563,9 +1566,9 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>SellingExpense</DataSetName>
-        <Top>1.97326in</Top>
+        <Top>2.23576in</Top>
         <Height>0.5in</Height>
-        <Width>6.62501in</Width>
+        <Width>6.6in</Width>
         <ZIndex>2</ZIndex>
         <Visibility>
           <Hidden>=IIF(Globals!RenderFormat.Name="EXCEL",True,False)</Hidden>
@@ -1586,10 +1589,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
               <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.16667in</Width>
+              <Width>1.16in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.54167in</Width>
+              <Width>0.53in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -2020,7 +2023,7 @@ OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label)
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Parent_Account_Key4">
                     <CanGrow>true</CanGrow>
@@ -2073,7 +2076,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Textbox156">
                     <CanGrow>true</CanGrow>
@@ -2113,9 +2116,9 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>AdministrativeExpense</DataSetName>
-        <Top>2.97327in</Top>
+        <Top>3.23577in</Top>
         <Height>0.5in</Height>
-        <Width>6.62501in</Width>
+        <Width>6.6in</Width>
         <ZIndex>3</ZIndex>
         <Visibility>
           <Hidden>=IIF(Globals!RenderFormat.Name="EXCEL",True,False)</Hidden>
@@ -2148,7 +2151,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
         <rd:DefaultName>Textbox4</rd:DefaultName>
         <Top>0.01111in</Top>
         <Height>0.25in</Height>
-        <Width>3.89583in</Width>
+        <Width>3.41792in</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -2161,9 +2164,9 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
         </Style>
       </Textbox>
       <Line Name="Line5">
-        <Top>0.94028in</Top>
+        <Top>1.20278in</Top>
         <Height>0in</Height>
-        <Width>10.17646in</Width>
+        <Width>6.72in</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -2183,10 +2186,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
               <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.16667in</Width>
+              <Width>1.16in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.54167in</Width>
+              <Width>0.53in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -2599,7 +2602,7 @@ OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label)
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Parent_Account_Key6">
                     <CanGrow>true</CanGrow>
@@ -2652,7 +2655,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Textbox5">
                     <CanGrow>true</CanGrow>
@@ -2692,9 +2695,9 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>ManagementSalary</DataSetName>
-        <Top>2.47726in</Top>
+        <Top>2.73976in</Top>
         <Height>0.5in</Height>
-        <Width>6.62501in</Width>
+        <Width>6.6in</Width>
         <ZIndex>6</ZIndex>
         <Visibility>
           <Hidden>=IIF(Globals!RenderFormat.Name="EXCEL",True,False)</Hidden>
@@ -2715,10 +2718,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
               <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.16667in</Width>
+              <Width>1.16in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.54167in</Width>
+              <Width>0.53in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -3153,7 +3156,7 @@ OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label)
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Parent_Account_Key5">
                     <CanGrow>true</CanGrow>
@@ -3206,7 +3209,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Textbox90">
                     <CanGrow>true</CanGrow>
@@ -3246,9 +3249,9 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>SpecialRevenue</DataSetName>
-        <Top>3.47101in</Top>
+        <Top>3.73351in</Top>
         <Height>0.5in</Height>
-        <Width>6.62501in</Width>
+        <Width>6.6in</Width>
         <ZIndex>7</ZIndex>
         <Visibility>
           <Hidden>=IIF(Globals!RenderFormat.Name="EXCEL",True,False)</Hidden>
@@ -3269,10 +3272,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
               <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.16667in</Width>
+              <Width>1.16in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.54167in</Width>
+              <Width>0.53in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -4464,7 +4467,7 @@ OR Fields!Version.Value &lt;&gt; trim(Parameters!BizClusterVersion.Label)
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Parent_Account_Key7">
                     <CanGrow>true</CanGrow>
@@ -4517,7 +4520,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Textbox14">
                     <CanGrow>true</CanGrow>
@@ -4562,7 +4565,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Textbox36">
                     <CanGrow>true</CanGrow>
@@ -4601,7 +4604,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Textbox1">
                     <CanGrow>true</CanGrow>
@@ -4646,7 +4649,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Textbox2">
                     <CanGrow>true</CanGrow>
@@ -4685,7 +4688,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.91667in</Size>
+                <Size>2.91in</Size>
                 <CellContents>
                   <Textbox Name="Textbox85">
                     <CanGrow>true</CanGrow>
@@ -4725,9 +4728,9 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Invoice</DataSetName>
-        <Top>3.97101in</Top>
+        <Top>4.23351in</Top>
         <Height>1.5in</Height>
-        <Width>6.62501in</Width>
+        <Width>6.6in</Width>
         <ZIndex>8</ZIndex>
         <Visibility>
           <Hidden>=IIF(Globals!RenderFormat.Name="EXCEL",True,False)</Hidden>
@@ -4763,7 +4766,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
         <rd:DefaultName>Textbox4</rd:DefaultName>
         <Top>0.58889in</Top>
         <Height>0.25in</Height>
-        <Width>3.89583in</Width>
+        <Width>3.41792in</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -4797,7 +4800,7 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
         <rd:DefaultName>Textbox4</rd:DefaultName>
         <Top>0.28889in</Top>
         <Height>0.25in</Height>
-        <Width>3.89583in</Width>
+        <Width>3.41792in</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -4809,11 +4812,45 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox45">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Print Date : " &amp; format(now,"dd/MM/yyyy hh:mm tt")</Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>0.89167in</Top>
+        <Height>0.25in</Height>
+        <Width>3.41792in</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>5.47101in</Height>
+    <Height>5.78351in</Height>
     <Style />
   </Body>
-  <Width>10.17646in</Width>
+  <Width>6.74in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -8887,6 +8924,11 @@ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, F
     <DataSet Name="DimBusinessClusterBusinessCluster">
       <Query>
         <DataSourceName>DS</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
         <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Business Cluster].CURRENTMEMBER.MEMBER_CAPTION 
 MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Business Cluster].CURRENTMEMBER.UNIQUENAME 
 MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Business Cluster].CURRENTMEMBER.LEVEL.ORDINAL 
@@ -8894,7 +8936,8 @@ MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Business Cluster].
 SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS 
 
 , [Dim Business Cluster].[Business Cluster].ALLMEMBERS ON ROWS 
-FROM [RLG-Finance]</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS 
+FROM [RLG-Finance])</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -8954,8 +8997,24 @@ MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Business Cluster].
 SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS 
 
 , [Dim Business Cluster].[Business Cluster].ALLMEMBERS ON ROWS 
-FROM [RLG-Finance]</Statement>
-              <ParameterDefinitions />
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS 
+FROM [RLG-Finance])</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
+              </ParameterDefinitions>
             </Query>
           </QueryDefinition>
         </rd:DesignerState>
@@ -9071,6 +9130,22 @@ FROM [RLG-Finance]</Statement>
     </DataSet>
   </DataSets>
   <ReportParameters>
+    <ReportParameter Name="BizClusterVersion">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Dim Business Cluster].[Version].&amp;[Since 2016]</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>BizClusterVersion</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>BizClusterVersion</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
     <ReportParameter Name="DimBusinessClusterBusinessCluster">
       <DataType>String</DataType>
       <DefaultValue>
@@ -9091,7 +9166,7 @@ FROM [RLG-Finance]</Statement>
       <DataType>DateTime</DataType>
       <DefaultValue>
         <Values>
-          <Value>=CDate(YEAR(NOW) &amp; "-01-01")</Value>
+          <Value>=CDate("01-01-" &amp; YEAR(NOW))</Value>
         </Values>
       </DefaultValue>
       <Prompt>From Date</Prompt>
@@ -9100,26 +9175,10 @@ FROM [RLG-Finance]</Statement>
       <DataType>DateTime</DataType>
       <DefaultValue>
         <Values>
-          <Value>=CDate(YEAR(NOW) &amp; "-12-31")</Value>
+          <Value>=CDate("12-31-" &amp; YEAR(NOW))</Value>
         </Values>
       </DefaultValue>
       <Prompt>To Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="BizClusterVersion">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>[Dim Business Cluster].[Version].[Null]</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>BizClusterVersion</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>BizClusterVersion</DataSetName>
-          <ValueField>ParameterValue</ValueField>
-          <LabelField>ParameterCaptionIndented</LabelField>
-        </DataSetReference>
-      </ValidValues>
     </ReportParameter>
   </ReportParameters>
   <Code>Function SumLookup(ByVal items As Object()) As Decimal
