@@ -179,12 +179,20 @@
       <FullPath>Copy of 15_PnL_Standard_By_BusinessLevel.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Copy of 16_PnLConsolidated_With_Affiliate_Filter.rdl</Name>
+      <FullPath>Copy of 16_PnLConsolidated_With_Affiliate_Filter.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Copy of 17_BL_Consolidated_With_Affiliate_Ending.rdl</Name>
       <FullPath>Copy of 17_BL_Consolidated_With_Affiliate_Ending.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Copy of 18_BudgetVSForecastByTypeOfRevenue.rdl</Name>
       <FullPath>Copy of 18_BudgetVSForecastByTypeOfRevenue.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Copy of Cummu17_BL_Consolidated_Ending.rdl</Name>
+      <FullPath>Copy of Cummu17_BL_Consolidated_Ending.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Copy of FinancePLConsolidateBU.rdl</Name>
@@ -407,20 +415,20 @@
       <FullPath>TEST_PnL Standard2.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>TestFilterforFilter.rdl</Name>
-      <FullPath>TestFilterforFilter.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>TestDate.rdl</Name>
       <FullPath>TestDate.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Copy of 16_PnLConsolidated_With_Affiliate_Filter.rdl</Name>
-      <FullPath>Copy of 16_PnLConsolidated_With_Affiliate_Filter.rdl</FullPath>
+      <Name>TestFilterforFilter.rdl</Name>
+      <FullPath>TestFilterforFilter.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Copy of Cummu17_BL_Consolidated_Ending.rdl</Name>
-      <FullPath>Copy of Cummu17_BL_Consolidated_Ending.rdl</FullPath>
+      <Name>SPList.rdl</Name>
+      <FullPath>SPList.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>New_Ratio.rdl</Name>
+      <FullPath>New_Ratio.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

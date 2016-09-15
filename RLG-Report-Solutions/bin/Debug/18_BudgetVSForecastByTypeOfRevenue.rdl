@@ -6634,8 +6634,11 @@
           <QueryParameter Name="DimTimeMonth">
             <Value>=Parameters!DimTimeMonth.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="DimTimeQuarter">
+            <Value>=Parameters!DimTimeQuarter.Value</Value>
+          </QueryParameter>
         </QueryParameters>
-        <CommandText> SELECT NON EMPTY { [Measures].[Budget Amount], [Measures].[Actual Amount] } ON COLUMNS, NON EMPTY { ([Dim Business Cluster].[Business Cluster].[Business Cluster].ALLMEMBERS * [Dim Time].[Year].[Year].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS FROM [RLG-Finance]))) WHERE ( IIF( STRTOSET(@DimTimeMonth, CONSTRAINED).Count = 1, STRTOSET(@DimTimeMonth, CONSTRAINED), [Dim Time].[Month].currentmember ), [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <CommandText> SELECT NON EMPTY { [Measures].[Budget Amount], [Measures].[Actual Amount] } ON COLUMNS, NON EMPTY { ([Dim Business Cluster].[Business Cluster].[Business Cluster].ALLMEMBERS * [Dim Time].[Year].[Year].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@DimTimeQuarter, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS FROM [RLG-Finance])))) WHERE ( IIF( STRTOSET(@DimTimeMonth, CONSTRAINED).Count = 1, STRTOSET(@DimTimeMonth, CONSTRAINED), [Dim Time].[Month].currentmember ), [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3], IIF( STRTOSET(@DimTimeQuarter, CONSTRAINED).Count = 1, STRTOSET(@DimTimeQuarter, CONSTRAINED), [Dim Time].[Quarter].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -6733,6 +6736,17 @@
                       </Members>
                     </Condition>
                   </FilterItem>
+                  <FilterItem>
+                    <HierarchyUniqueName>[Dim Time].[Quarter]</HierarchyUniqueName>
+                    <Condition xsi:type="EqualTo">
+                      <Members>
+                        <Member>
+                          <MemberUniqueName>[Dim Time].[Quarter].[All]</MemberUniqueName>
+                        </Member>
+                      </Members>
+                      <Parametrized>true</Parametrized>
+                    </Condition>
+                  </FilterItem>
                 </FilterItems>
               </Filter>
               <Calculations />
@@ -6740,7 +6754,7 @@
               <QueryProperties />
             </QuerySpecification>
             <Query>
-              <Statement> SELECT NON EMPTY { [Measures].[Budget Amount], [Measures].[Actual Amount] } ON COLUMNS, NON EMPTY { ([Dim Business Cluster].[Business Cluster].[Business Cluster].ALLMEMBERS * [Dim Time].[Year].[Year].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS FROM [RLG-Finance]))) WHERE ( IIF( STRTOSET(@DimTimeMonth, CONSTRAINED).Count = 1, STRTOSET(@DimTimeMonth, CONSTRAINED), [Dim Time].[Month].currentmember ), [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+              <Statement> SELECT NON EMPTY { [Measures].[Budget Amount], [Measures].[Actual Amount] } ON COLUMNS, NON EMPTY { ([Dim Business Cluster].[Business Cluster].[Business Cluster].ALLMEMBERS * [Dim Time].[Year].[Year].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@DimTimeQuarter, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS FROM [RLG-Finance])))) WHERE ( IIF( STRTOSET(@DimTimeMonth, CONSTRAINED).Count = 1, STRTOSET(@DimTimeMonth, CONSTRAINED), [Dim Time].[Month].currentmember ), [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3], IIF( STRTOSET(@DimTimeQuarter, CONSTRAINED).Count = 1, STRTOSET(@DimTimeQuarter, CONSTRAINED), [Dim Time].[Quarter].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>DimTimeYear</Name>
@@ -6771,6 +6785,29 @@
                       <ReferencedParameters>
                         <ReferencedParameter>
                           <Name>DimTimeYear</Name>
+                        </ReferencedParameter>
+                      </ReferencedParameters>
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>DimTimeQuarter</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Time].[Quarter].[All]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>Quarter</Caption>
+                  <HierarchyUniqueName>[Dim Time].[Quarter]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Quarter].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Quarter].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Quarter].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS FROM [RLG-Finance])))</Statement>
+                    <ParameterizedStatement>
+                      <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Quarter].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Quarter].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Quarter].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS FROM [RLG-Finance])))</Statement>
+                      <ReferencedParameters>
+                        <ReferencedParameter>
+                          <Name>DimTimeYear</Name>
+                        </ReferencedParameter>
+                        <ReferencedParameter>
+                          <Name>DimTimeMonth</Name>
                         </ReferencedParameter>
                       </ReferencedParameters>
                     </ParameterizedStatement>
@@ -6954,6 +6991,9 @@
           <QueryParameter Name="DimTimeYear">
             <Value>=Parameters!DimTimeYear.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="DimTimeQuarter">
+            <Value>=Parameters!DimTimeQuarter.Value</Value>
+          </QueryParameter>
           <QueryParameter Name="DimTimeMonth">
             <Value>=Parameters!DimTimeMonth.Value</Value>
           </QueryParameter>
@@ -6965,7 +7005,12 @@ MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[P
  { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].[Level 04].ALLMEMBERS) ) } 
                                                                      
 
-DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS FROM [RLG-Finance]))) WHERE ( IIF( STRTOSET(@DimTimeMonth, CONSTRAINED).Count = 1, STRTOSET(@DimTimeMonth, CONSTRAINED), [Dim Time].[Month].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
+FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS 
+FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS
+FROM ( SELECT ( STRTOSET(@DimTimeQuarter, CONSTRAINED) ) ON COLUMNS  
+FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS FROM [RLG-Finance])))) 
+WHERE ( IIF( STRTOSET(@DimTimeMonth, CONSTRAINED).Count = 1, STRTOSET(@DimTimeMonth, CONSTRAINED), [Dim Time].[Month].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -7062,7 +7107,12 @@ MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[P
  { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].[Level 04].ALLMEMBERS) ) } 
                                                                      
 
-DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS FROM [RLG-Finance]))) WHERE ( IIF( STRTOSET(@DimTimeMonth, CONSTRAINED).Count = 1, STRTOSET(@DimTimeMonth, CONSTRAINED), [Dim Time].[Month].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
+FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS 
+FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS
+FROM ( SELECT ( STRTOSET(@DimTimeQuarter, CONSTRAINED) ) ON COLUMNS  
+FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS FROM [RLG-Finance])))) 
+WHERE ( IIF( STRTOSET(@DimTimeMonth, CONSTRAINED).Count = 1, STRTOSET(@DimTimeMonth, CONSTRAINED), [Dim Time].[Month].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>DimTimeYear</Name>
@@ -7073,6 +7123,21 @@ DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEV
                   <HierarchyUniqueName>[Dim Time].[Year]</HierarchyUniqueName>
                   <ParameterValuesQuery>
                     <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Year].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Year].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Year].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Year].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>DimTimeQuarter</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Time].[Quarter].[All]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>DimTimeQuarter</Caption>
+                  <HierarchyUniqueName>[Dim Time].[Quarter]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Quarter].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Quarter].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Quarter].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
                     <ParameterizedStatement>
                       <ReferencedParameters />
                     </ParameterizedStatement>
@@ -7132,6 +7197,9 @@ DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEV
           <QueryParameter Name="DimTimeMonth">
             <Value>=Parameters!DimTimeMonth.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="DimTimeQuarter">
+            <Value>=Parameters!DimTimeQuarter.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -7140,7 +7208,13 @@ MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[P
  { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].[Level 03].ALLMEMBERS) ) } 
                                                                      
 
-DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS FROM [RLG-Finance]))) WHERE ( IIF( STRTOSET(@DimTimeMonth, CONSTRAINED).Count = 1, STRTOSET(@DimTimeMonth, CONSTRAINED), [Dim Time].[Month].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
+FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS
+FROM ( SELECT ( STRTOSET(@DimTimeQuarter, CONSTRAINED) ) ON COLUMNS  
+ FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS 
+FROM [RLG-Finance])))) 
+WHERE ( IIF( STRTOSET(@DimTimeMonth, CONSTRAINED).Count = 1, STRTOSET(@DimTimeMonth, CONSTRAINED), [Dim Time].[Month].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -7237,7 +7311,13 @@ MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[P
  { ([Dim Time].[Year].[Year].ALLMEMBERS * DESCENDANTS([Dim Lay Out PL Contribution Margin].[Parent Account Key].[Level 03].ALLMEMBERS) ) } 
                                                                      
 
-DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS FROM [RLG-Finance]))) WHERE ( IIF( STRTOSET(@DimTimeMonth, CONSTRAINED).Count = 1, STRTOSET(@DimTimeMonth, CONSTRAINED), [Dim Time].[Month].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEVEL_NUMBER ON ROWS 
+FROM ( SELECT ( STRTOSET(@DimTimeMonth, CONSTRAINED) ) ON COLUMNS
+FROM ( SELECT ( STRTOSET(@DimTimeQuarter, CONSTRAINED) ) ON COLUMNS  
+ FROM ( SELECT ( STRTOSET(@DimTimeYear, CONSTRAINED) ) ON COLUMNS 
+FROM ( SELECT ( { [Dim Lay Out PL Contribution Margin].[Parent Account Key].&amp;[3] } ) ON COLUMNS 
+FROM [RLG-Finance])))) 
+WHERE ( IIF( STRTOSET(@DimTimeMonth, CONSTRAINED).Count = 1, STRTOSET(@DimTimeMonth, CONSTRAINED), [Dim Time].[Month].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>DimTimeYear</Name>
@@ -7262,6 +7342,20 @@ DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEV
                   <HierarchyUniqueName>[Dim Time].[Month]</HierarchyUniqueName>
                   <ParameterValuesQuery>
                     <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Month].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Month].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Month].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Month].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>DimTimeQuarter</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Time].[Quarter].[All]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>DimTimeQuarter</Caption>
+                  <HierarchyUniqueName>[Dim Time].[Quarter]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Quarter].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Quarter].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Quarter].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
                     <ParameterizedStatement>
                       <ReferencedParameters />
                     </ParameterizedStatement>
@@ -7295,6 +7389,189 @@ DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEV
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="DimTimeQuarter">
+      <Query>
+        <DataSourceName>DS</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="ParamFilterDimTimeQuarterValue">
+            <Value>=Parameters!ParamFilterDimTimeQuarterValue.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Quarter].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Quarter].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Quarter].ALLMEMBERS ON ROWS 
+FROM ( SELECT ( -STRTOSET(@ParamFilterDimTimeQuarterValue, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance])</CommandText>
+        <rd:DesignerState>
+          <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Time</DimensionName>
+                      <HierarchyName>Quarter</HierarchyName>
+                      <HierarchyUniqueName>[Dim Time].[Quarter]</HierarchyUniqueName>
+                      <LevelName>Quarter</LevelName>
+                      <UniqueName>[Dim Time].[Quarter].[Quarter]</UniqueName>
+                    </ID>
+                    <ItemCaption>Quarter</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterCaption</MeasureName>
+                      <UniqueName>[Measures].[ParameterCaption]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterCaption</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterValue</MeasureName>
+                      <UniqueName>[Measures].[ParameterValue]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterValue</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterLevel</MeasureName>
+                      <UniqueName>[Measures].[ParameterLevel]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterLevel</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                </Items>
+              </Select>
+              <From>RLG-Finance</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Quarter].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Quarter].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Quarter].ALLMEMBERS ON ROWS 
+FROM ( SELECT ( -STRTOSET(@ParamFilterDimTimeQuarterValue, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance])</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>ParamFilterDimTimeQuarterValue</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Time].[Quarter].&amp;[Q0]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>ParamFilterDimTimeQuarterValue</Caption>
+                  <HierarchyUniqueName>[Dim Time].[Quarter]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Quarter].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Quarter].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Quarter].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
+              </ParameterDefinitions>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+      <Fields>
+        <Field Name="Quarter">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Time].[Quarter].[Quarter]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="ParamFilterDimTimeQuarterValue">
+      <Query>
+        <DataSourceName>DS</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Quarter].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Quarter].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Quarter].ALLMEMBERS ON ROWS FROM [RLG-Finance]</CommandText>
+        <rd:DesignerState>
+          <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterCaption</MeasureName>
+                      <UniqueName>[Measures].[ParameterCaption]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterCaption</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterValue</MeasureName>
+                      <UniqueName>[Measures].[ParameterValue]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterValue</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterLevel</MeasureName>
+                      <UniqueName>[Measures].[ParameterLevel]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterLevel</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                </Items>
+              </Select>
+              <From>RLG-Finance</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Time].[Quarter].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Time].[Quarter].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Time].[Quarter].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Time].[Quarter].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+              <ParameterDefinitions />
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+      <Fields>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportParameters>
     <ReportParameter Name="DimTimeYear">
@@ -7312,6 +7589,40 @@ DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME, PARENT_UNIQUE_NAME, LEV
           <LabelField>ParameterCaptionIndented</LabelField>
         </DataSetReference>
       </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="ParamFilterDimTimeQuarterValue">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Dim Time].[Quarter].&amp;[Q0]</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ParamFilterDimTimeQuarterValue</Prompt>
+      <Hidden>true</Hidden>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>ParamFilterDimTimeQuarterValue</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="DimTimeQuarter">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Dim Time].[Quarter].[All]</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Quarter</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DimTimeQuarter</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
     </ReportParameter>
     <ReportParameter Name="DimTimeMonth">
       <DataType>String</DataType>
