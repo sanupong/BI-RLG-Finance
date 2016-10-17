@@ -3115,7 +3115,8 @@ ReportItems!Textbox62.Value
 (Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[515]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"Tax"))*-1)
 
 )
-/Sum(Fields!NumberOfShareHolders.Value, "NoOfShare")</Value>
+/
+Sum(Fields!NumberOfShareHolders.Value, "NoOfShare")</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -3197,7 +3198,8 @@ ReportItems!Textbox7.Value
 -
 (Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Standard].[Parent Account Key].&amp;[515]"+Parameters!DimTimeYear1.Value, Fields!Parent_Account_Key.UniqueName+Parameters!DimTimeYear1.Value, Fields!Actual_Amount.Value,"Tax2"))*-1)
 )
-/Sum(Fields!NumberOfShareHolders.Value, "NoOfShare2")</Value>
+/
+Sum(Fields!NumberOfShareHolders.Value, "NoOfShare2")</Value>
                 <Style>
                   <FontFamily>Calibri</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -3293,21 +3295,8 @@ ReportItems!Textbox7.Value
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>188ef996-ab64-4008-ba17-35669e446ba7</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="SPList">
-      <ConnectionProperties>
-        <DataProvider>SHAREPOINTLIST</DataProvider>
-        <ConnectString>http://192.168.15.26/sites/BI-Finance</ConnectString>
-        <IntegratedSecurity>true</IntegratedSecurity>
-      </ConnectionProperties>
-      <rd:SecurityType>Integrated</rd:SecurityType>
-      <rd:DataSourceID>2e2b4249-afec-4733-943f-31a53e81339a</rd:DataSourceID>
-    </DataSource>
     <DataSource Name="SQL">
-      <ConnectionProperties>
-        <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=.;Initial Catalog=RLGDWH</ConnectString>
-        <IntegratedSecurity>true</IntegratedSecurity>
-      </ConnectionProperties>
+      <DataSourceReference>SQL</DataSourceReference>
       <rd:SecurityType>Integrated</rd:SecurityType>
       <rd:DataSourceID>909a5ea4-14c4-4674-8e8a-fb887414ca4b</rd:DataSourceID>
     </DataSource>
@@ -7518,78 +7507,6 @@ WHERE     (Company = @Company) AND (Year = @Year)</CommandText>
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="SPNoOfShare">
-      <Query>
-        <DataSourceName>SPList</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="Company">
-            <Value>=ltrim(Parameters!DimCompanySegmentCompanySegment.Label)</Value>
-          </QueryParameter>
-          <QueryParameter Name="Year">
-            <Value>=ltrim(Parameters!DimTimeYear1.Label)</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>&lt;RSSharePointList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ListName&gt;Number of Shareholders&lt;/ListName&gt;
-  &lt;ViewFields&gt;
-    &lt;FieldRef Name="Title" /&gt;
-    &lt;FieldRef Name="Year" /&gt;
-    &lt;FieldRef Name="Number_x0020_of_x0020_Shareholde" /&gt;
-  &lt;/ViewFields&gt;
-  &lt;Query&gt;
-    &lt;Where&gt;
-      &lt;And&gt;
-        &lt;Contains&gt;
-          &lt;FieldRef Name="Title" /&gt;
-          &lt;Value Type="Text"&gt;
-            &lt;Parameter Name="Company" /&gt;
-          &lt;/Value&gt;
-        &lt;/Contains&gt;
-        &lt;Contains&gt;
-          &lt;FieldRef Name="Year" /&gt;
-          &lt;Value Type="Text"&gt;
-            &lt;Parameter Name="Year" /&gt;
-          &lt;/Value&gt;
-        &lt;/Contains&gt;
-      &lt;/And&gt;
-    &lt;/Where&gt;
-  &lt;/Query&gt;
-&lt;/RSSharePointList&gt;</CommandText>
-        <rd:DesignerState>
-          <QueryDefinition xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
-            <SelectedColumns>
-              <ColumnExpression ColumnOwner="Number of Shareholders" ColumnName="Title" />
-              <ColumnExpression ColumnOwner="Number of Shareholders" ColumnName="Year" />
-              <ColumnExpression ColumnOwner="Number of Shareholders" ColumnName="Number_x0020_of_x0020_Shareholde" />
-            </SelectedColumns>
-            <Filters>
-              <Filter Operator="CONTAINS" Param="True">
-                <ColumnExpression ColumnOwner="Number of Shareholders" ColumnName="Title" />
-                <FilterValue>All</FilterValue>
-              </Filter>
-              <Filter Operator="CONTAINS" Param="True">
-                <ColumnExpression ColumnOwner="Number of Shareholders" ColumnName="Year" />
-                <FilterValue>2014</FilterValue>
-              </Filter>
-            </Filters>
-          </QueryDefinition>
-        </rd:DesignerState>
-      </Query>
-      <Fields>
-        <Field Name="Company">
-          <DataField>Title</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Year">
-          <DataField>Year</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Number_of_Shareholders">
-          <DataField>Number_x0020_of_x0020_Shareholde</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
     <DataSet Name="NoOfShare2">
       <Query>
         <DataSourceName>SQL</DataSourceName>
@@ -7867,6 +7784,28 @@ WHERE     (Company = @Company) AND (Year = @Year)</CommandText>
         </DataSetReference>
       </ValidValues>
       <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="Company">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>All</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Company</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="Year">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>2014</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Year</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
   </ReportParameters>
   <Code>Function SumLookup(ByVal items As Object()) As Decimal

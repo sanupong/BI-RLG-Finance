@@ -10,6 +10,14 @@
       <Name>DS.rds</Name>
       <FullPath>DS.rds</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>SPList.rds</Name>
+      <FullPath>SPList.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>SQL.rds</Name>
+      <FullPath>SQL.rds</FullPath>
+    </ProjectItem>
   </DataSources>
   <DataSets>
     <ProjectItem>
@@ -22,10 +30,6 @@
     </ProjectItem>
   </DataSets>
   <Reports>
-    <ProjectItem>
-      <Name>01_FI.rdl</Name>
-      <FullPath>01_FI.rdl</FullPath>
-    </ProjectItem>
     <ProjectItem>
       <Name>01PnL_Standard_By_Group.rdl</Name>
       <FullPath>01PnL_Standard_By_Group.rdl</FullPath>
@@ -111,22 +115,6 @@
       <FullPath>19_BudgetVSForecastByTypeOfRevenue_Detail.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>ARReport1.rdl</Name>
-      <FullPath>ARReport1.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>ARReport2.rdl</Name>
-      <FullPath>ARReport2.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>ARReport3.rdl</Name>
-      <FullPath>ARReport3.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>ARReport4.rdl</Name>
-      <FullPath>ARReport4.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>BeeBackUp of 07_PnL_Standard_By_Cluster.rdl</Name>
       <FullPath>BeeBackUp of 07_PnL_Standard_By_Cluster.rdl</FullPath>
     </ProjectItem>
@@ -135,92 +123,12 @@
       <FullPath>BK_11_PnL_Standard_By_BusinessLevel.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Copy (2) of 07_PnL_Standard_By_Cluster.rdl</Name>
-      <FullPath>Copy (2) of 07_PnL_Standard_By_Cluster.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy (2) of 14_PnL_Standard_By_BusinessLevel.rdl</Name>
-      <FullPath>Copy (2) of 14_PnL_Standard_By_BusinessLevel.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy (2) of PnL_Standard.rdl</Name>
-      <FullPath>Copy (2) of PnL_Standard.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy (3) of 07_PnL_Standard_By_Cluster.rdl</Name>
-      <FullPath>Copy (3) of 07_PnL_Standard_By_Cluster.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of 07_PnL_Standard_By_Cluster.rdl</Name>
-      <FullPath>Copy of 07_PnL_Standard_By_Cluster.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of 08_PnL_Standard_By_Cluster_Unit.rdl</Name>
-      <FullPath>Copy of 08_PnL_Standard_By_Cluster_Unit.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of 09_PnL_Standard_By_Cluster_BuGrp.rdl</Name>
-      <FullPath>Copy of 09_PnL_Standard_By_Cluster_BuGrp.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of 11_PnL_Standard_By_BusinessLevel.rdl</Name>
-      <FullPath>Copy of 11_PnL_Standard_By_BusinessLevel.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of 12_PnL_Standard_By_BusinessLevel.rdl</Name>
-      <FullPath>Copy of 12_PnL_Standard_By_BusinessLevel.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of 13_PnL_Standard_By_BusinessLevel.rdl</Name>
-      <FullPath>Copy of 13_PnL_Standard_By_BusinessLevel.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of 15_PnL_Standard_By_BusinessLevel.rdl</Name>
-      <FullPath>Copy of 15_PnL_Standard_By_BusinessLevel.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of 16_PnLConsolidated_With_Affiliate_Filter.rdl</Name>
-      <FullPath>Copy of 16_PnLConsolidated_With_Affiliate_Filter.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of 17_BL_Consolidated_With_Affiliate_Ending.rdl</Name>
-      <FullPath>Copy of 17_BL_Consolidated_With_Affiliate_Ending.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of 18_BudgetVSForecastByTypeOfRevenue.rdl</Name>
-      <FullPath>Copy of 18_BudgetVSForecastByTypeOfRevenue.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of Cummu17_BL_Consolidated_Ending.rdl</Name>
-      <FullPath>Copy of Cummu17_BL_Consolidated_Ending.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of FinancePLConsolidateBU.rdl</Name>
-      <FullPath>Copy of FinancePLConsolidateBU.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of FinancePLConsolidateBU_new.rdl</Name>
-      <FullPath>Copy of FinancePLConsolidateBU_new.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of PL.rdl</Name>
-      <FullPath>Copy of PL.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of PnL_Standard.rdl</Name>
-      <FullPath>Copy of PnL_Standard.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Copy of TEST_BK.rdl</Name>
-      <FullPath>Copy of TEST_BK.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Cummu17_BL_Consolidated_Ending.rdl</Name>
       <FullPath>Cummu17_BL_Consolidated_Ending.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Cummu17_BL_Consolidated_With_Affiliate_Ending.rdl</Name>
-      <FullPath>Cummu17_BL_Consolidated_With_Affiliate_Ending.rdl</FullPath>
+      <Name>Cummu17_BL_Consolidated_With_Affiliate_EndingOld.rdl</Name>
+      <FullPath>Cummu17_BL_Consolidated_With_Affiliate_EndingOld.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>FinancePLConsolidateBU.rdl</Name>
@@ -263,24 +171,8 @@
       <FullPath>NetIncomeByCompany_2.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Old_07_PnL_Standard_By_Cluster.rdl</Name>
-      <FullPath>Old_07_PnL_Standard_By_Cluster.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Old_08_PnL_Standard_By_Cluster_Unit.rdl</Name>
-      <FullPath>Old_08_PnL_Standard_By_Cluster_Unit.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Old_09_PnL_Standard_By_Cluster_BuGrp.rdl</Name>
-      <FullPath>Old_09_PnL_Standard_By_Cluster_BuGrp.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Old_10_PnL_Standard_By_Cluster_Line.rdl</Name>
-      <FullPath>Old_10_PnL_Standard_By_Cluster_Line.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Old14_PnL_Standard_By_BusinessLevel.rdl</Name>
-      <FullPath>Old14_PnL_Standard_By_BusinessLevel.rdl</FullPath>
+      <Name>New_Ratio.rdl</Name>
+      <FullPath>New_Ratio.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>PL Standard by BU Segment.rdl</Name>
@@ -371,64 +263,8 @@
       <FullPath>ReceivableOverview.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Report1.rdl</Name>
-      <FullPath>Report1.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Report2.rdl</Name>
-      <FullPath>Report2.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Report3.rdl</Name>
-      <FullPath>Report3.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Report5.rdl</Name>
-      <FullPath>Report5.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>templete_PnL Standard1.rdl</Name>
-      <FullPath>templete_PnL Standard1.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>templete_PnL Standard2.rdl</Name>
-      <FullPath>templete_PnL Standard2.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>templete_PnL Standard3.rdl</Name>
-      <FullPath>templete_PnL Standard3.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>TEST.rdl</Name>
-      <FullPath>TEST.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Test_AlignParameter.rdl</Name>
-      <FullPath>Test_AlignParameter.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>TEST_BK.rdl</Name>
-      <FullPath>TEST_BK.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>TEST_PnL Standard2.rdl</Name>
-      <FullPath>TEST_PnL Standard2.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>TestDate.rdl</Name>
-      <FullPath>TestDate.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>TestFilterforFilter.rdl</Name>
-      <FullPath>TestFilterforFilter.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>SPList.rdl</Name>
-      <FullPath>SPList.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>New_Ratio.rdl</Name>
-      <FullPath>New_Ratio.rdl</FullPath>
+      <Name>Cummu17_BL_Consolidated_With_Affiliate_Ending.rdl</Name>
+      <FullPath>Cummu17_BL_Consolidated_With_Affiliate_Ending.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

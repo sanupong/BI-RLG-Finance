@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SPList">
+  <ConnectionProperties>
+    <Extension>SHAREPOINTLIST</Extension>
+    <ConnectString>http://192.168.15.26/sites/BI-Finance</ConnectString>
+    <IntegratedSecurity>true</IntegratedSecurity>
+  </ConnectionProperties>
+  <DataSourceID>8207ad2e-5bd5-4106-a160-a7888bbfa349</DataSourceID>
+</RptDataSource>

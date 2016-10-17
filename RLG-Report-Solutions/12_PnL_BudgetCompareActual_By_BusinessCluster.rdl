@@ -30,7 +30,6 @@
                     <rd:DefaultName>Textbox1</rd:DefaultName>
                     <Style>
                       <Border>
-                        <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
                       <BackgroundColor>LightGoldenrodYellow</BackgroundColor>
@@ -40,46 +39,12 @@
                       <PaddingBottom>2pt</PaddingBottom>
                     </Style>
                   </Textbox>
+                  <RowSpan>2</RowSpan>
                 </CellContents>
               </TablixCornerCell>
             </TablixCornerRow>
             <TablixCornerRow>
-              <TablixCornerCell>
-                <CellContents>
-                  <Textbox Name="Textbox59">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value />
-                            <Style>
-                              <FontFamily>Tahoma</FontFamily>
-                              <FontWeight>Bold</FontWeight>
-                            </Style>
-                          </TextRun>
-                        </TextRuns>
-                        <Style>
-                          <TextAlign>Center</TextAlign>
-                        </Style>
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Textbox59</rd:DefaultName>
-                    <Style>
-                      <Border>
-                        <Color>LightGrey</Color>
-                        <Style>Solid</Style>
-                      </Border>
-                      <BackgroundColor>LightGoldenrodYellow</BackgroundColor>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                </CellContents>
-              </TablixCornerCell>
+              <TablixCornerCell />
             </TablixCornerRow>
           </TablixCornerRows>
         </TablixCorner>
@@ -193,6 +158,10 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ddebf7",
@@ -293,6 +262,10 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ddebf7",
@@ -390,6 +363,10 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ddebf7",
@@ -447,7 +424,6 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
                         <rd:DefaultName>Business_Cluster1</rd:DefaultName>
                         <Style>
                           <Border>
-                            <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
                           <BackgroundColor>LightGoldenrodYellow</BackgroundColor>
@@ -484,7 +460,6 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
                             <rd:DefaultName>Business_Cluster</rd:DefaultName>
                             <Style>
                               <Border>
-                                <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
                               <BackgroundColor>LightGoldenrodYellow</BackgroundColor>
@@ -525,7 +500,6 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
                             <rd:DefaultName>Textbox7</rd:DefaultName>
                             <Style>
                               <Border>
-                                <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
                               <BackgroundColor>LightGoldenrodYellow</BackgroundColor>
@@ -566,7 +540,6 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
                             <rd:DefaultName>Textbox17</rd:DefaultName>
                             <Style>
                               <Border>
-                                <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
                               <BackgroundColor>LightGoldenrodYellow</BackgroundColor>
@@ -642,6 +615,14 @@ Fields!Parent_Account_Key.LevelNumber = 5 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ddebf7",
@@ -790,6 +771,10 @@ Fields!ISLEAFNODE.Value = true ,"#000000"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -889,6 +874,10 @@ Fields!ISLEAFNODE.Value = true ,"#000000"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -984,6 +973,10 @@ Fields!ISLEAFNODE.Value = true ,"#000000"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -1070,6 +1063,10 @@ ReportItems!Textbox149.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1145,6 +1142,10 @@ ReportItems!Textbox97.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1216,6 +1217,10 @@ ReportItems!Textbox149.Value)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1306,6 +1311,14 @@ Fields!ISLEAFNODE.Value = true ,"#000000"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -1353,6 +1366,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>#daeef3</BackgroundColor>
                       <PaddingLeft>=Cstr(Fields!Parent_Account_Key.LevelNumber * 10) &amp; "pt"</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -1488,6 +1509,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -1584,6 +1609,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -1677,6 +1706,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -1764,6 +1797,10 @@ ReportItems!Textbox185.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1844,6 +1881,10 @@ Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account K
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1915,6 +1956,10 @@ ReportItems!Textbox185.Value)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -2004,6 +2049,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -2051,6 +2104,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>#daeef3</BackgroundColor>
                       <PaddingLeft>=Cstr(Fields!Parent_Account_Key.LevelNumber * 10) &amp; "pt"</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -2186,6 +2247,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -2282,6 +2347,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -2375,6 +2444,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -2470,6 +2543,10 @@ ReportItems!Textbox204.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -2557,6 +2634,10 @@ ReportItems!Textbox55.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -2628,6 +2709,10 @@ ReportItems!Textbox204.Value)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -2717,6 +2802,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -2764,6 +2857,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>#daeef3</BackgroundColor>
                       <PaddingLeft>=Cstr(Fields!Parent_Account_Key.LevelNumber * 10) &amp; "pt"</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -2946,6 +3047,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -3042,6 +3147,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -3135,6 +3244,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -3226,6 +3339,10 @@ ReportItems!Textbox8.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -3306,6 +3423,10 @@ ReportItems!Textbox44.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -3377,6 +3498,10 @@ ReportItems!Textbox8.Value)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -3466,6 +3591,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -3513,6 +3646,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>#daeef3</BackgroundColor>
                       <PaddingLeft>=Cstr(Fields!Parent_Account_Key.LevelNumber * 10) &amp; "pt"</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -3648,6 +3789,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -3744,6 +3889,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -3837,6 +3986,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -3936,6 +4089,10 @@ ReportItems!Textbox93.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -4027,6 +4184,10 @@ ReportItems!Textbox65.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -4098,6 +4259,10 @@ ReportItems!Textbox93.Value)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -4187,6 +4352,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -4234,6 +4407,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>#daeef3</BackgroundColor>
                       <PaddingLeft>=Cstr(Fields!Parent_Account_Key.LevelNumber * 10) &amp; "pt"</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -4369,6 +4550,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -4465,6 +4650,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -4558,6 +4747,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -4673,6 +4866,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -4781,6 +4978,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -4864,6 +5065,10 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -4943,6 +5148,10 @@ ReportItems!Textbox4.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>="White"</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5017,6 +5226,10 @@ ReportItems!Textbox10.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>="White"</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5088,6 +5301,10 @@ ReportItems!Textbox4.Value)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>="White"</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5190,6 +5407,10 @@ ReportItems!Textbox20.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5291,6 +5512,10 @@ ReportItems!Textbox24.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5362,6 +5587,10 @@ ReportItems!Textbox20.Value)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5441,6 +5670,10 @@ ReportItems!Textbox9.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>="White"</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5515,6 +5748,10 @@ ReportItems!Textbox75.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>="White"</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5586,6 +5823,10 @@ ReportItems!Textbox9.Value)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>="White"</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5653,6 +5894,10 @@ Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account K
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </BottomBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5692,6 +5937,14 @@ ReportItems!Textbox88.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5759,6 +6012,10 @@ Code.SumLookup(LOOKUPSET("[Dim Lay Out PL Contribution Margin].[Parent Account K
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </BottomBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5798,6 +6055,14 @@ ReportItems!Textbox76.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5833,6 +6098,10 @@ ReportItems!Textbox76.Value
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </BottomBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5869,6 +6138,14 @@ ReportItems!Textbox88.Value)</Value>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <BackgroundColor>#daeef3</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -5958,6 +6235,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>=Switch(
 Fields!ISLEAFNODE.Value = true ,"#ffffff",
 Fields!Parent_Account_Key.LevelNumber = 2 and Fields!ISLEAFNODE.Value = false ,"#ffffcc",
@@ -6011,6 +6296,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>#daeef3</BackgroundColor>
                       <PaddingLeft>=Cstr(Fields!Parent_Account_Key.LevelNumber * 10) &amp; "pt"</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -6050,6 +6343,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>="White"</BackgroundColor>
                       <PaddingLeft>=Cstr(Fields!Parent_Account_Key.LevelNumber * 10) &amp; "pt"</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -6095,6 +6396,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>#daeef3</BackgroundColor>
                       <PaddingLeft>=Cstr(Fields!Parent_Account_Key.LevelNumber * 10) &amp; "pt"</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -6134,6 +6443,14 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>="White"</BackgroundColor>
                       <PaddingLeft>=Cstr(Fields!Parent_Account_Key.LevelNumber * 10) &amp; "pt"</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -6173,6 +6490,18 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <BottomBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </BottomBorder>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                      </RightBorder>
                       <BackgroundColor>#daeef3</BackgroundColor>
                       <PaddingLeft>=Cstr(Fields!Parent_Account_Key.LevelNumber * 10) &amp; "pt"</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -6334,6 +6663,9 @@ Fields!Parent_Account_Key.LevelNumber = 4 and Fields!ISLEAFNODE.Value = false ,"
           <QueryParameter Name="DimBusinessClusterBusinessType">
             <Value>=Parameters!DimBusinessClusterBusinessType.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -6357,7 +6689,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -6483,7 +6816,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</Statement>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>FromDimTimeDateActual</Name>
@@ -6615,6 +6949,20 @@ FROM [RLG-Finance])))))</Statement>
                     </ParameterizedStatement>
                   </ParameterValuesQuery>
                   <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
                 </ParameterDefinition>
               </ParameterDefinitions>
             </Query>
@@ -6699,6 +7047,9 @@ FROM [RLG-Finance])))))</Statement>
           <QueryParameter Name="DimBusinessClusterBusinessType">
             <Value>=Parameters!DimBusinessClusterBusinessType.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -6719,7 +7070,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -6842,7 +7194,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</Statement>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>FromDimTimeDateActual</Name>
@@ -6974,6 +7327,20 @@ FROM [RLG-Finance])))))</Statement>
                     </ParameterizedStatement>
                   </ParameterValuesQuery>
                   <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
                 </ParameterDefinition>
               </ParameterDefinitions>
             </Query>
@@ -7058,6 +7425,9 @@ FROM [RLG-Finance])))))</Statement>
           <QueryParameter Name="DimBusinessClusterBusinessType">
             <Value>=Parameters!DimBusinessClusterBusinessType.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -7081,7 +7451,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -7207,7 +7578,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</Statement>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>FromDimTimeDateActual</Name>
@@ -7340,6 +7712,20 @@ FROM [RLG-Finance])))))</Statement>
                   </ParameterValuesQuery>
                   <MultipleValues>true</MultipleValues>
                 </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
               </ParameterDefinitions>
             </Query>
           </QueryDefinition>
@@ -7423,6 +7809,9 @@ FROM [RLG-Finance])))))</Statement>
           <QueryParameter Name="DimBusinessClusterBusinessType">
             <Value>=Parameters!DimBusinessClusterBusinessType.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -7451,7 +7840,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -7598,7 +7988,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</Statement>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>FromDimTimeDateActual</Name>
@@ -7730,6 +8121,20 @@ FROM [RLG-Finance])))))</Statement>
                     </ParameterizedStatement>
                   </ParameterValuesQuery>
                   <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
                 </ParameterDefinition>
               </ParameterDefinitions>
             </Query>
@@ -7822,6 +8227,9 @@ FROM [RLG-Finance])))))</Statement>
           <QueryParameter Name="DimBusinessClusterBusinessType">
             <Value>=Parameters!DimBusinessClusterBusinessType.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -7846,7 +8254,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -7973,7 +8382,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</Statement>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>FromDimTimeDateActual</Name>
@@ -8105,6 +8515,20 @@ FROM [RLG-Finance])))))</Statement>
                     </ParameterizedStatement>
                   </ParameterValuesQuery>
                   <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
                 </ParameterDefinition>
               </ParameterDefinitions>
             </Query>
@@ -8189,6 +8613,9 @@ FROM [RLG-Finance])))))</Statement>
           <QueryParameter Name="DimBusinessClusterBusinessType">
             <Value>=Parameters!DimBusinessClusterBusinessType.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -8212,7 +8639,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -8338,7 +8766,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</Statement>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>FromDimTimeDateActual</Name>
@@ -8470,6 +8899,20 @@ FROM [RLG-Finance])))))</Statement>
                     </ParameterizedStatement>
                   </ParameterValuesQuery>
                   <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
                 </ParameterDefinition>
               </ParameterDefinitions>
             </Query>
@@ -8554,6 +8997,9 @@ FROM [RLG-Finance])))))</Statement>
           <QueryParameter Name="DimBusinessClusterBusinessType">
             <Value>=Parameters!DimBusinessClusterBusinessType.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -8577,7 +9023,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -8703,7 +9150,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</Statement>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>FromDimTimeDateActual</Name>
@@ -8835,6 +9283,20 @@ FROM [RLG-Finance])))))</Statement>
                     </ParameterizedStatement>
                   </ParameterValuesQuery>
                   <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
                 </ParameterDefinition>
               </ParameterDefinitions>
             </Query>
@@ -8919,6 +9381,9 @@ FROM [RLG-Finance])))))</Statement>
           <QueryParameter Name="DimBusinessClusterBusinessType">
             <Value>=Parameters!DimBusinessClusterBusinessType.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -8942,7 +9407,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -9068,7 +9534,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</Statement>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>FromDimTimeDateActual</Name>
@@ -9200,6 +9667,20 @@ FROM [RLG-Finance])))))</Statement>
                     </ParameterizedStatement>
                   </ParameterValuesQuery>
                   <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
                 </ParameterDefinition>
               </ParameterDefinitions>
             </Query>
@@ -9284,6 +9765,9 @@ FROM [RLG-Finance])))))</Statement>
           <QueryParameter Name="DimBusinessClusterBusinessType">
             <Value>=Parameters!DimBusinessClusterBusinessType.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -9307,7 +9791,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -9433,7 +9918,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</Statement>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>FromDimTimeDateActual</Name>
@@ -9565,6 +10051,20 @@ FROM [RLG-Finance])))))</Statement>
                     </ParameterizedStatement>
                   </ParameterValuesQuery>
                   <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
                 </ParameterDefinition>
               </ParameterDefinitions>
             </Query>
@@ -9649,6 +10149,9 @@ FROM [RLG-Finance])))))</Statement>
           <QueryParameter Name="DimBusinessClusterBusinessType">
             <Value>=Parameters!DimBusinessClusterBusinessType.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -9672,7 +10175,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -9798,7 +10302,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</Statement>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>FromDimTimeDateActual</Name>
@@ -9931,6 +10436,20 @@ FROM [RLG-Finance])))))</Statement>
                   </ParameterValuesQuery>
                   <MultipleValues>true</MultipleValues>
                 </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                </ParameterDefinition>
               </ParameterDefinitions>
             </Query>
           </QueryDefinition>
@@ -10014,6 +10533,9 @@ FROM [RLG-Finance])))))</Statement>
           <QueryParameter Name="DimBusinessClusterBusinessType">
             <Value>=Parameters!DimBusinessClusterBusinessType.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -10037,7 +10559,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -10163,7 +10686,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</Statement>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>FromDimTimeDateActual</Name>
@@ -10297,6 +10821,20 @@ FROM [RLG-Finance])))))</Statement>
                     </ParameterizedStatement>
                   </ParameterValuesQuery>
                   <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
                 </ParameterDefinition>
               </ParameterDefinitions>
             </Query>
@@ -10746,6 +11284,9 @@ FROM [RLG-Finance])))))</Statement>
           <QueryParameter Name="DimBusinessClusterBusinessCluster">
             <Value>=Parameters!DimBusinessClusterBusinessCluster.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="BizClusterVersion">
+            <Value>=Parameters!BizClusterVersion.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>WITH 
 MEMBER [MEASURES].[ISLEAFNODE] AS IsLeaf([Dim Lay Out PL Contribution Margin].[Parent Account Key].CURRENTMEMBER)
@@ -10769,7 +11310,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</CommandText>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -10895,7 +11437,8 @@ FROM ( SELECT ( STRTOSET(@DimScenarioScenarioName, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimCompanySegmentCompanySegementDesc, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessType, CONSTRAINED) ) ON COLUMNS
 FROM ( SELECT ( STRTOSET(@DimBusinessClusterBusinessCluster, CONSTRAINED) ) ON COLUMNS
-FROM [RLG-Finance])))))</Statement>
+FROM ( SELECT ( STRTOSET(@BizClusterVersion, CONSTRAINED) ) ON COLUMNS
+FROM [RLG-Finance]))))))</Statement>
               <ParameterDefinitions>
                 <ParameterDefinition>
                   <Name>FromDimTimeDateActual</Name>
@@ -11029,6 +11572,20 @@ FROM [RLG-Finance])))))</Statement>
                     </ParameterizedStatement>
                   </ParameterValuesQuery>
                   <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>BizClusterVersion</Name>
+                  <DefaultValues>
+                    <DefaultValue>[Dim Business Cluster].[Version].&amp;[Since 2016]</DefaultValue>
+                  </DefaultValues>
+                  <Caption>BizClusterVersion</Caption>
+                  <HierarchyUniqueName>[Dim Business Cluster].[Version]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Dim Business Cluster].[Version].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Dim Business Cluster].[Version].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Dim Business Cluster].[Version].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Business Cluster].[Version].ALLMEMBERS ON ROWS FROM [RLG-Finance]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
                 </ParameterDefinition>
               </ParameterDefinitions>
             </Query>
